@@ -11,6 +11,7 @@ import { fileURLToPath } from 'node:url';
 import { CHAINS } from './content/chains.js';
 import { CASES } from './content/cases.js';
 import { AUTHORED_SAQS } from './content/authored-saqs.js';
+import { AUTHORED_MCQS } from './content/authored-mcqs.js';
 import { PATHS, QUIZ, ROUTE, NO_MOCK, EXCLUDE, NO_IMAGE_OK, META } from './sim.config.mjs';
 import { SAQ_ANSWERS, norm } from './content/saq-answers.js';
 import { loadVideos, loadVideoMatches, loadRefMatches, loadPartRefs, matchVideo, matchRefs, matchParts } from './content/explain.mjs';
@@ -22,18 +23,20 @@ import { HELPLINE } from './content/helpline.js';
 import { QTOPIC } from './content/qtopic.js';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
-const BANK = path.resolve(HERE, PATHS.bank);
-const CAP = path.resolve(HERE, PATHS.cap);
+/* a paper with no Canvas quizzes at all (PATHS.bank / PATHS.cap null) has no captured bank:
+   every question then comes from content/authored-*.js and says so on the page */
+const BANK = PATHS.bank ? path.resolve(HERE, PATHS.bank) : null;
+const CAP = PATHS.cap ? path.resolve(HERE, PATHS.cap) : null;
 
-const bank = JSON.parse(fs.readFileSync(path.join(BANK, 'questions.json'), 'utf8'));
-const imgBind = JSON.parse(fs.readFileSync(path.join(HERE, 'images.json'), 'utf8'));
+const bank = BANK ? JSON.parse(fs.readFileSync(path.join(BANK, 'questions.json'), 'utf8')) : { quizzes: [] };
+const imgBind = CAP ? JSON.parse(fs.readFileSync(path.join(HERE, 'images.json'), 'utf8')) : {};
 /* a full-page-save capture inlines every figure as a data: URI, so it has no manifests */
 const readJSON = (p, d) => fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : d;
-const manifest = readJSON(path.join(CAP, 'images/manifest.json'), {});
-const extManifest = readJSON(path.join(CAP, 'images/ext-manifest.json'), {});
+const manifest = CAP ? readJSON(path.join(CAP, 'images/manifest.json'), {}) : {};
+const extManifest = CAP ? readJSON(path.join(CAP, 'images/ext-manifest.json'), {}) : {};
 /* the same captures, read a second way: structure kept, blanks and images in place.
    `q` (flat, hers verbatim) stays the id + search text; `qh` is what the student sees. */
-const STEMS = structuredStems(CAP, manifest, extManifest);
+const STEMS = CAP ? structuredStems(CAP, manifest, extManifest) : {};
 
 /* QUIZ (quiz id -> [group, name]), EXCLUDE, NO_IMAGE_OK, ROUTE and NO_MOCK are declared in
    sim.config.mjs — same shapes and the same both-ways gates as hs2-test2. */
@@ -187,22 +190,39 @@ for (const z of bank.quizzes) {
   if (kept) quizzes.push({ id: fid, name: qname, sys: qsys, n: kept });
 }
 
-/* the tool's own written questions (content/authored-saqs.js): a course whose quizzes
-   carry no written questions still sits a written section. Every one is labelled as the
-   tool's on the page, names its source, and lives in its own pseudo-quiz. */
+/* the tool's own questions (content/authored-mcqs.js, content/authored-saqs.js): a course
+   whose quizzes carry no written questions still sits a written section, and a course with
+   no quizzes at all still sits a paper. Every one is labelled as the tool's on the page and
+   names its source. Each entry may name the quiz row it belongs under ({quiz, quizName});
+   without one it lands in a single "written practice" row. */
 {
-  const seen = new Set(); let kept = 0;
-  for (const a of AUTHORED_SAQS) {
-    const bad = !a.q || !a.src || !META.sys[a.sys] || !Array.isArray(a.steps) || a.steps.length < 2 || seen.has(a.q);
-    if (bad) { console.error('BUILD FAILED: authored SAQ needs q, src, a META.sys group, >=2 steps and a unique stem: ' + JSON.stringify(a).slice(0, 120)); process.exit(1); }
-    seen.add(a.q);
-    const esc = t => t.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-    questions.push({ id: qid('authored', a.q, a.steps), quiz: 'authored', sys: a.sys, pts: a.pts || a.steps.length, q: a.q,
-      qh: '<p>' + esc(a.q) + '</p>', qt: a.q, imgs: [], type: 'essay', authored: 1, ...(a.topic ? { topic: a.topic } : {}),
-      saq: { steps: a.steps, src: 'Question and model answer are the tool’s · from ' + a.src } });
-    kept++;
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const rows = new Map();   // quiz id -> {id,name,sys,n}
+  const row = (a) => {
+    const id = a.quiz || 'authored';
+    if (!rows.has(id)) rows.set(id, { id, name: a.quizName || 'Written practice — the tool’s questions', sys: a.quiz ? a.sys : 'authored', n: 0, authored: 1 });
+    rows.get(id).n++; return id;
+  };
+  const seen = new Set();
+  const die = (why, a) => { console.error('BUILD FAILED: authored question ' + why + ': ' + JSON.stringify(a).slice(0, 140)); process.exit(1); };
+  for (const a of AUTHORED_MCQS) {
+    if (!a.q || !a.src || !META.sys[a.sys]) die('needs q, src and a META.sys group', a);
+    if (!Array.isArray(a.options) || a.options.length < 2 || new Set(a.options).size !== a.options.length) die('needs 2+ distinct options', a);
+    if (!Number.isInteger(a.correct) || !a.options[a.correct]) die('has no valid key', a);
+    if (seen.has('m|' + a.q)) die('repeats a stem', a); seen.add('m|' + a.q);
+    questions.push({ id: qid(a.quiz || 'authored', a.q, a.options[a.correct]), quiz: row(a), sys: a.sys, pts: 1, q: a.q,
+      qh: '<p>' + esc(a.q) + '</p>', qt: a.q, imgs: [], type: 'mcq', authored: 1, opts: a.options, key: [a.options[a.correct]],
+      src: a.src, ...(a.why ? { why: a.why } : {}) });
   }
-  if (kept) quizzes.push({ id: 'authored', name: 'Written practice — the tool’s questions', sys: 'authored', n: kept, authored: 1 });
+  for (const a of AUTHORED_SAQS) {
+    if (!a.q || !a.src || !META.sys[a.sys]) die('needs q, src and a META.sys group', a);
+    if (!Array.isArray(a.steps) || a.steps.length < 2) die('needs 2+ model steps', a);
+    if (seen.has('s|' + a.q)) die('repeats a stem', a); seen.add('s|' + a.q);
+    questions.push({ id: qid(a.quiz || 'authored', a.q, a.steps), quiz: row(a), sys: a.sys, pts: a.pts || a.steps.length, q: a.q,
+      qh: '<p>' + esc(a.q) + '</p>', qt: a.q, imgs: [], type: 'essay', authored: 1, ...(a.fmt ? { fmt: a.fmt } : {}),
+      saq: { steps: a.steps, src: 'Question and model answer are the tool’s · from ' + a.src } });
+  }
+  quizzes.push(...rows.values());
 }
 
 /* ── the explain layer: video + judged text references per question ──
@@ -215,7 +235,7 @@ const vmatches = has('video-matches.json') ? loadVideoMatches(CONTENT, videos) :
 const rmatches = has('ref-matches.json') ? loadRefMatches(CONTENT) : {};
 const pmatches = loadPartRefs(path.join(HERE, 'content'));
 let nPartQ = 0, nPartRefs = 0; const pmUsed = new Set();
-const SLIDESRC = path.join(CAP, 'slides');
+const SLIDESRC = CAP ? path.join(CAP, 'slides') : null;   // rendered deck slides live beside the captures
 let nVid = 0, nRef = 0, nSlide = 0, nSlideText = 0, nHer = 0, nCourse = 0, nPat = 0, nPatOnly = 0;
 const usedSlides = new Set(), vmUsed = new Set(), rmUsed = new Set();
 for (const q of questions) {
@@ -229,8 +249,8 @@ for (const q of questions) {
          figure the student just answered on (the label-the-glands bug). Such
          questions keep text references only, never a second figure. */
       if (q.imgs.length) continue;
-      const png = path.join(SLIDESRC, r.slug, `slide-${r.n}.png`);
-      if (fs.existsSync(png)) {
+      const png = SLIDESRC ? path.join(SLIDESRC, r.slug, `slide-${r.n}.png`) : null;
+      if (png && fs.existsSync(png)) {
         const name = `${r.slug}-${r.n}.jpg`;
         usedSlides.add(JSON.stringify([png, name]));
         refs.push({ k: 'slide', src: r.src, slide: name }); nSlide++;
@@ -277,7 +297,7 @@ for (let i = questions.length - 1; i >= 0; i--) {
   else dup.add(questions[i].id);
 }
 if (dropped) console.log('deduped', dropped, 'identical duplicate captures');
-for (const q of questions) for (const f of q.imgs) if (!fs.existsSync(path.join(CAP, 'images', f))) fails.push('missing image file ' + f);
+for (const q of questions) for (const f of q.imgs) if (!CAP || !fs.existsSync(path.join(CAP, 'images', f))) fails.push('missing image file ' + f);
 for (const c of CHAINS) if (c.beads.filter(b => b.t).length < 4) fails.push('chain too short: ' + c.id);
 /* every blank-type question must carry every one of its blanks inline, once, in the
    stem the student sees — a blank the key has but the stem lacks is the exact bug this
@@ -302,12 +322,14 @@ const reached = new Set();
 for (const q of questions) if (q.vid) { reached.add(q.vid.id); if (q.vid.alt) reached.add(q.vid.alt.id); }
 const DATA = {
   built: new Date().toISOString().slice(0, 10),
-  stats: { n: questions.length, held: held.length, videos: videos.length, videosReached: reached.size,
+  stats: { n: questions.length, nAuthored: questions.filter(q => q.authored).length, held: held.length, videos: videos.length, videosReached: reached.size,
     videosFill: videos.filter(v => v.ch).length,
     withVideo: questions.filter(q => q.vid).length,
     withRef: nRef, withHer: questions.filter(q => q.refs && q.refs.some(r => r.k === 'slide' || r.k === 'her')).length, withCourse: nCourse,
     withPatton: nPat, pattonOnly: nPatOnly, partQ: nPartQ, partRefs: nPartRefs, withHl: nHl },
-  quizzes: quizzes.sort((a, b) => a.sys.localeCompare(b.sys) || a.name.localeCompare(b.name)),
+  quizzes: META.quizOrder
+    ? quizzes.sort((a, b) => (META.quizOrder.indexOf(a.id) + 1 || 999) - (META.quizOrder.indexOf(b.id) + 1 || 999))
+    : quizzes.sort((a, b) => a.sys.localeCompare(b.sys) || a.name.localeCompare(b.name)),
   questions, chains: CHAINS, cases: CASES, focus: FOCUS, helpline: HELPLINE, held,
   meta: META,
 };

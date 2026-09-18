@@ -347,6 +347,17 @@ function dealSys(s,n){ return shuffle(pickN(CLOSED.filter(q=>q.sys===s), n, new 
 function dealFull(){
   const closed = dealStratified(META.shape.closed);
   const nth = S.scores.filter(s=>s.mode==='full').length;
+  if(META.shape.saqMarks){
+    /* the paper publishes marks, not a count: deal least-seen written questions, spread
+       across the groups, until their marks reach the total (never past it by a whole question) */
+    const out=[]; let m=0; const used=new Set();
+    const ranked=pickN(ESSAYS, ESSAYS.length, new Set());
+    for(let pass=0; pass<2 && m<META.shape.saqMarks; pass++) for(const q of ranked){
+      if(used.has(q.id)||m+q.pts>META.shape.saqMarks) continue;
+      if(!pass && out.some(x=>x.quiz===q.quiz)) continue;      // first pass: one per topic
+      out.push(q); used.add(q.id); m+=q.pts; if(m>=META.shape.saqMarks) break; }
+    return closed.concat(shuffle(out));
+  }
   const saqs = (DATA.cases||[]).slice(0, META.shape.saq).map(c=>mkCaseQ(c, c.questions[nth % c.questions.length]));
   const rest = Math.max(0, META.shape.saq - saqs.length);
   return closed.concat(saqs, shuffle(pickN(ESSAYS, rest, new Set())));
@@ -356,7 +367,7 @@ function mkCaseQ(c, cq){
     pts:cq.marks, q:cq.q, imgs:[], saq:{steps:cq.steps, src:c.name+' — model answer is the tool’s'},
     scenario: c.scenario };
 }
-const FULL_SAQ = () => Math.min(META.shape.saq, (DATA.cases||[]).length + ESSAYS.length);
+const FULL_SAQ = () => Math.min(META.shape.saq||0, (DATA.cases||[]).length + ESSAYS.length);
 /* the misses pile, worst first: once four or more have been missed twice, only those */
 function missPool(){
   let ids = Object.keys(S.miss).filter(id=>S.miss[id]>=2);
@@ -485,6 +496,7 @@ function home(){
   const PEEK = HAS.ref||HAS.vid ? ` — you can open ${HAS.ref&&HAS.vid?'the slide or video':HAS.ref?'the slide':'the video'} <i>before</i> you answer, too` : '';
   const fullSaq = FULL_SAQ(), shape = META.shape;
   document.getElementById('view').innerHTML = `
+  ${META.banner?`<div class="note" style="border-left-color:var(--danger);color:var(--fg)">${META.banner}</div>`:''}
   ${sparkCard()}
   ${focusCard()}
   <div class="card door" style="border-left:4px solid var(--ok)">
@@ -508,14 +520,15 @@ function home(){
     <h2>🎯 Deal me a mock test</h2>
     <p>Practice only — dealt from ${META.bankOf} whole question bank. This is NOT the real thing; ${META.sitting.what} is ${META.sitting.when}.</p>
     <button class="btn primary wide" data-go="mini">Sit a mini mock test · ${shape.mini||12} questions, ~${Math.round((shape.mini||12)*1.25)} min</button>
-    <button class="btn wide" data-go="full">Sit the full mock test · ${Math.min(shape.closed,MOCKABLE.length)} multi-choice${fullSaq?` + ${fullSaq} written`:''} · ${shape.minutes?shape.minutes+' min':'untimed'}</button>
-    ${fullSaq<shape.saq?`<div class="note">The real paper has <b>${shape.saq} short-answer questions</b>. ${fullSaq?`This bank has ${fullSaq} written question${fullSaq===1?'':'s'} so far`:'This bank has none yet'} — ${META.saqGap||'the Canvas quizzes contain no written questions, so they have to be written from the lecture decks, each naming its source.'} Until then the full mock is the multi-choice section${fullSaq?' plus what exists':''}.</div>`:''}
+    <button class="btn wide" data-go="full">Sit the full mock test · ${Math.min(shape.closed,MOCKABLE.length)} multi-choice${shape.saqMarks?` + ${shape.saqMarks} marks written`:fullSaq?` + ${fullSaq} written`:''} · ${shape.minutes?shape.minutes+' min':'untimed'}</button>
+    ${META.shapeNote?`<div class="note">${META.shapeNote}</div>`:''}
+    ${shape.saq&&fullSaq<shape.saq?`<div class="note">The real paper has <b>${shape.saq} short-answer questions</b>. ${fullSaq?`This bank has ${fullSaq} written question${fullSaq===1?'':'s'} so far`:'This bank has none yet'} — ${META.saqGap||'the Canvas quizzes contain no written questions, so they have to be written from the lecture decks, each naming its source.'} Until then the full mock is the multi-choice section${fullSaq?' plus what exists':''}.</div>`:''}
     ${!shape.minutes?`<div class="note">The length of the real paper has not been published, so the full mock is not timed. It still shows how long you took.</div>`:''}
     <button class="btn wide" data-go="miss" ${Object.keys(S.miss).length? '':'disabled'}>Redo my misses${Object.keys(S.miss).length?` · ${Object.keys(S.miss).length} in the pile`:''}</button>
   </div>
   <div class="card door">
     <h2>🗂 Pick my rep</h2>
-    <p>The Canvas quizzes, unlocked. <b>Tick any number of them</b> — or a whole group — and the bar at the bottom runs them as one: <b>Learn</b> with ${UNDER} under every question, or <b>Sit</b> as a test and see them at the end. A row's own Learn / Sit takes that quiz alone. No attempt limits, marked instantly.</p>
+    <p>${META.pickIntro||'The Canvas quizzes, unlocked.'} <b>Tick any number of them</b> — or a whole group — and the bar at the bottom runs them as one: <b>Learn</b> with ${UNDER} under every question, or <b>Sit</b> as a test and see them at the end. A row's own Learn / Sit takes that quiz alone. No attempt limits, marked instantly.</p>
     <div class="chips"><span>Tick</span>
       <button class="chip" data-pk="all">All ${DATA.quizzes.length}</button>
       ${Object.keys(SYS).filter(k=>DATA.quizzes.some(z=>z.sys===k)).map(k=>`<button class="chip" data-pk="${k}">${esc(sysTag(k))}</button>`).join('')}
@@ -708,7 +721,7 @@ function renderQ(){
       : q.blanks.map((b,i)=>`<div class="blankrow"><label>${esc(blankLabel(b,i))}${q.bk==='dd'?'':' (type it)'}</label>${widget(b,i)}</div>`).join('');
   } else if(q.type==='essay'){
     body=`${q.scenario?`<div class="note">${esc(q.scenario)}</div>`:''}
-      ${q.authored?`<div class="note">This question was written by this tool from the lecture decks — it is not one the lecturers set. It is here because the real paper has a written section and the Canvas quizzes have none.</div>`:''}
+      ${q.authored&&DATA.stats.nAuthored<DATA.stats.n?`<div class="note">This question was written by this tool from the lecture decks — it is not one the lecturers set. It is here because the real paper has a written section and the Canvas quizzes have none.</div>`:''}
       <div class="note">Written question · ${q.pts} marks — write ${q.pts} numbered points, ${META.saqHint||'one point each'}. You mark yourself against the model ${SIT.learn?'when you press Check':'at the end'}.</div>
       <textarea data-essay placeholder="1. …&#10;2. …">${a&&a.text?esc(a.text):''}</textarea>`;
   }
@@ -995,7 +1008,9 @@ function keyHTML(q,a){
     const right=blankOK(q,b,yours);
     const alt=q.bk==='fib'&&b.options.length>1?` <span class="refsrc">(also accepted: ${esc(b.options.filter(o=>o!==b.correct).join(', '))})</span>`:'';
     return `<div class="krow ${right?'kok':''}">${esc(blankLabel(b,i))} <b>→ ${esc(b.correct)}</b>${alt}${yours&&!right?` <span class="kyou">you: ${esc(yours)}</span>`:yours?'':' <span class="kyou">unanswered</span>'}</div>${right?'':partRefHTML(q,i)}`}).join('')}</div>`;
-  return `<div class="keyline">Key: ${esc(keyText(q))}</div>`;
+  return `<div class="keyline">Key: ${esc(keyText(q))}</div>`
+    + (q.why?`<div class="refq">💡 <i>${esc(q.why)}</i><span class="refsrc"> — the tool’s explanation${q.src?' · from '+esc(q.src):''}</span></div>`
+       :q.src?`<div class="refsrc">From ${esc(q.src)}</div>`:'');
 }
 /* the one line that states this part (q.prefs, judged + quote-gated per pair / blank / step);
    shown under a part the student got wrong or left blank, never under a right one */
@@ -1033,6 +1048,7 @@ function aiQuestionPrompt(q,withFig){
   if(q.opts&&q.opts.length)L.push(`Options: ${q.opts.map(o=>optLabel(q,o)).join(' | ')}`);
   if(q.saq)L.push('The model answer, one mark per step: '+q.saq.steps.map((s,i)=>`(${i+1}) ${s}`).join(' '));
   else L.push(`Correct answer: ${keyText(q)}`);
+  if(q.why)L.push(`The study tool’s explanation: ${q.why}${q.src?' (source: '+q.src+')':''}`);
   L.push(`My answer: ${you||'(none — I didn’t know)'}`);
   if(q.imgs&&q.imgs.length)L.push(withFig?'The question’s figure is pasted with this message. Read it before answering — the question is about it.':'This question has a diagram I can’t paste. Don’t guess what it shows; work from the text.');
   for(const r of q.refs||[]){
@@ -1122,10 +1138,10 @@ $('#helpBtn').onclick=()=>{const H=META.help||{}, nAuth=DATA.questions.filter(q=
   <h2 style="margin-top:0">What is this?</h2>
   <p>${H.what||''}</p>
   <h3>Where the questions come from</h3>
-  <p>${DATA.stats.n-nAuth} questions captured from ${DATA.quizzes.filter(z=>!z.authored).length} Canvas quizzes, answer keys
-  extracted from the graded pages — stems, options and keys exactly as set, nothing invented.
+  <p>${DATA.stats.n-nAuth?`${DATA.stats.n-nAuth} questions captured from ${DATA.quizzes.filter(z=>!z.authored).length} Canvas quizzes, answer keys
+  extracted from the graded pages — stems, options and keys exactly as set, nothing invented.`:(H.noBank||'This paper has no Canvas quizzes, so nothing here was captured.')}
   ${ESSAYS.some(q=>!q.authored)?`Written questions from Canvas have <b>model answers written by this tool</b> (Canvas publishes none), one mark per step, each naming its source. `:''}
-  ${nAuth?`<b>${nAuth} written questions were written by this tool</b> from the lecture decks, because the real paper has a written section and the quizzes have none; each is labelled as the tool’s and names its deck. `:''}
+  ${nAuth?(H.authored||`<b>${nAuth} written questions were written by this tool</b> from the lecture decks, because the real paper has a written section and the quizzes have none; each is labelled as the tool’s and names its deck. `):''}
   ${DATA.chains.length?'Warm-up chains are scaffolds built from the decks, not the lecturer’s material. ':''}
   ${nNm?`${nNm} questions are about being a student on this course rather than the subject (attendance, extensions, online-exam rules); they stay under Pick my rep but are never dealt into a mock paper. `:''}</p>
   ${H.groups?`<p>${H.groups}</p>`:''}
@@ -1152,7 +1168,7 @@ $('#helpBtn').onclick=()=>{const H=META.help||{}, nAuth=DATA.questions.filter(q=
   <h3>Your data</h3>
   <p>Scores and misses live in this browser only. Nothing is sent anywhere. Clearing site data wipes them.</p>
   <h3>For whoever maintains this</h3>
-  <p>Built by <code>build.mjs</code> from <code>bank/questions.json</code> (parsed Canvas captures) and <code>sim.config.mjs</code>.
+  <p>Built by <code>build.mjs</code> from ${DATA.stats.n-nAuth?'<code>bank/questions.json</code> (parsed Canvas captures), ':''}<code>content/</code> and <code>sim.config.mjs</code>.
   Rebuild: <code>node build.mjs</code>. Bank built ${DATA.built}. Multi-answer questions mark all-or-nothing;
   matching and dropdowns mark per part.</p>
   <button class="btn primary wide" onclick="this.closest('dialog').close()">Close</button>`;
