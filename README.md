@@ -4,8 +4,8 @@ Every practice quiz posted on Canvas for **Introduction to Nursing Practice (722
 sit them as often as you like, marked instantly, or let the tool deal mock papers from the whole
 bank in the real paper's shape. Same format as [hs2-test2](https://jeremyspm.github.io/hs2-test2/).
 
-The final: **Wed 4 Nov 2026 · 1:00 pm · 60 multi-choice + 10 short-answer · 50%** (course syllabus).
-Its length has not been published, so the full mock is untimed.
+The final: **Wed 4 Nov 2026 · 1:00–3:40 pm (160 min) · 60 multi-choice + 10 short-answer · 50%**
+(course syllabus; times from the Canvas Semester Timetable page).
 
 ## What is in it
 
@@ -23,9 +23,13 @@ Its length has not been published, so the full mock is untimed.
 - **The 10 short-answer questions.** The Canvas quizzes contain no written question at all. The
   tool's own, each naming the deck it was written from, go in `content/authored-saqs.js`; the page
   labels them as the tool's. Until then the full mock is the multi-choice section, and says so.
-- **Ten lectures have no quiz**: Community Needs Assessment, Tikanga & Kawa Whakaruruhau, Pain
-  Assessment, Family-centred Care, NZ Health Strategy, Discharge Planning, Therapeutic Use of Self,
-  Rheumatic Fever, Roles of Nurses, Long-term Conditions. Examinable, invisible to this bank.
+- **The bank covers 14 of the course's 26 lectures.** Nine taught lectures have no quiz: Community
+  Needs Assessment, Tikanga & Kawa Whakaruruhau, Pain Assessment, Family-centred Care, NZ Health
+  Strategy, Discharge Planning, Therapeutic Use of Self (decks on disk), Rheumatic Fever, Roles of
+  Nurses (16 Sep — not harvested yet). Three are still to be taught: Long-term Conditions (7 Oct),
+  Primary Health Care & Health Promotion (14 Oct), Health Screening & Standards of Competence
+  (20 Oct). Examinable, invisible to this bank; their questions go in `content/authored-*.js`.
+  Revision lectures 23 and 27 Oct are where the exam gets pointed at.
 - **The focus checklist** (what to learn, how far, per topic) — owed; every Paper Sim ships one.
 - Slide references under a question, and videos. Not built for this paper.
 - Ten Knowledge Check questions about being a student here (attendance, extensions, online-exam

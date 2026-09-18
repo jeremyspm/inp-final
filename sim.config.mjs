@@ -69,10 +69,11 @@ export const META = {
   bankOf: 'the INP lecturers’',          // "dealt from … whole question bank"
   who: 'the INP lecturers',              // "Model answers are the tool’s, not …’s"
   aiCtx: 'I’m a first-year nursing student in New Zealand sitting the final exam for Introduction to Nursing Practice (60 multiple-choice + 10 short-answer questions).',
-  sitting: { what: 'the INP final', date: '2026-11-04', when: 'Wed 4 Nov · 1:00 pm', cohortClose: null },
-  /* the real paper, from the course syllabus: "Final Exam - 60 Multi-Choice Questions +
-     10 Short-Answer Questions", 50%. Its length has not been published -> the full mock is untimed. */
-  shape: { closed: 60, saq: 10, minutes: null, mini: 12 },
+  sitting: { what: 'the INP final', date: '2026-11-04', when: 'Wed 4 Nov · 1:00–3:40 pm (room opens 12:30)', cohortClose: null },
+  /* the real paper: "Final Exam - 60 Multi-Choice Questions + 10 Short-Answer Questions", 50%
+     (course syllabus); 1300-1540 = 160 min (the Canvas Semester Timetable page, week 15). */
+  shape: { closed: 60, saq: 10, minutes: 160, mini: 12 },
+  shapeNote: 'The real paper is <b>160 minutes for 60 multi-choice + 10 short answers</b>. Until the written questions exist, a full mock here is the multi-choice section only — if it takes you more than about 75 minutes, the written section will not fit.',
   sys: {
     care: 'Nursing process & assessment',
     clin: 'Clinical knowledge',
@@ -84,11 +85,11 @@ export const META = {
   playlist: null,
   refLbl: { slide: 'Their slide', her: 'Their notes', course: 'Course file', patton: 'Textbook' },
   help: {
-    what: 'Every practice quiz posted on Canvas for <b>Introduction to Nursing Practice</b>, unlocked: sit them as often as you like, marked instantly — or let the tool deal you mixed mock papers from the whole bank. The final is <b>Wed 4 Nov 2026 · 1:00 pm · 60 multi-choice + 10 short-answer · 50% of the paper</b> (the course syllabus). Its length has not been published.',
+    what: 'Every practice quiz posted on Canvas for <b>Introduction to Nursing Practice</b>, unlocked: sit them as often as you like, marked instantly — or let the tool deal you mixed mock papers from the whole bank. The final is <b>Wed 4 Nov 2026 · 1:00–3:40 pm (160 min) · 60 multi-choice + 10 short-answer · 50% of the paper</b> (course syllabus and Canvas timetable).',
     groups: 'The four groups (Process · Clinical · Population · Professional) are <b>this tool’s sorting</b> of the 15 quizzes, so a mock can be dealt in proportion and you can drill one area. The course itself runs by week, not by theme. One quiz = one lecture topic.',
-    held: 'Ten lectures have <b>no Canvas quiz at all</b> — Community Needs Assessment, Tikanga &amp; Kawa Whakaruruhau, Pain Assessment, Family-centred Care, NZ Health Strategy, Discharge Planning, Therapeutic Use of Self, Rheumatic Fever, Roles of Nurses, Long-term Conditions. They are examinable and this bank cannot see them; the focus list carries them so they are not forgotten.',
+    held: '<b>This bank covers 14 of the course’s 26 lectures.</b> Nine lectures already taught have <b>no Canvas quiz at all</b> — Community Needs Assessment, Tikanga &amp; Kawa Whakaruruhau, Pain Assessment, Family-centred Care, NZ Health Strategy, Discharge Planning, Therapeutic Use of Self, Rheumatic Fever, Roles of Nurses — and three are still to come after the break: Long-term Conditions (7 Oct), Primary Health Care &amp; Health Promotion (14 Oct), Health Screening &amp; Standards of Competence (20 Oct). All twelve are examinable and this bank cannot see them. Questions for them have to be written from the decks, and will be labelled as the tool’s.',
   },
   focusCopy: {
-    pending: 'The checklist for this paper — every lecture topic, what you must be able to DO, how it gets asked and where it stops — is being built from the 27 lecture decks. Until it lands: the 15 quizzes below cover 14 of the 24 lectures. <b>Ten lectures have no quiz</b> (Community Needs Assessment, Tikanga &amp; Kawa Whakaruruhau, Pain Assessment, Family-centred Care, NZ Health Strategy, Discharge Planning, Therapeutic Use of Self, Rheumatic Fever, Roles of Nurses, Long-term Conditions) — a clean run here does not mean those are covered.',
+    pending: 'The checklist for this paper — every lecture topic, what you must be able to DO, how it gets asked and where it stops — is not built yet. What it has to say first: <b>the 15 quizzes below cover 14 of the 26 lectures.</b> Nine taught lectures have no quiz (Community Needs Assessment, Tikanga &amp; Kawa Whakaruruhau, Pain Assessment, Family-centred Care, NZ Health Strategy, Discharge Planning, Therapeutic Use of Self, Rheumatic Fever, Roles of Nurses) and three more arrive after the break (Long-term Conditions 7 Oct · Primary Health Care &amp; Health Promotion 14 Oct · Health Screening &amp; Standards of Competence 20 Oct). A clean run here does not mean those are covered. Revision lectures: <b>Fri 23 Oct and Tue 27 Oct</b> — whatever gets named there goes to the top of this list.',
   },
 };
