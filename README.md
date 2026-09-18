@@ -1,5 +1,7 @@
 # INP · Paper Sim — Final exam
 
+**Live: https://jeremyspm.github.io/inp-final/** · sister sim: [Pharm](https://jeremyspm.github.io/pharm-final/)
+
 Every practice quiz posted on Canvas for **Introduction to Nursing Practice (722.556)**, unlocked:
 sit them as often as you like, marked instantly, or let the tool deal mock papers from the whole
 bank in the real paper's shape. Same format as [hs2-test2](https://jeremyspm.github.io/hs2-test2/).
