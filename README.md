@@ -20,6 +20,13 @@ The final: **Wed 4 Nov 2026 · 1:00–3:40 pm (160 min) · 60 multi-choice + 10 
   short-answer section** across the 14 quizzed topics (one row per group). They live one file per
   lecture in `content/authored/`; the build gates a missing source, fewer than two model steps, a
   bad key or a repeated stem. The full mock now deals the real shape: 60 multi-choice + 10 written.
+- **The focus checklist** (`content/focus.js`, 27 rows: the 26 lectures + the orientation Knowledge
+  Check): per row what you must be able to DO, how the lecturers' own quiz asks it, where it stops.
+  Each row names where its questions come from and **the build counts them and fails unless every
+  question sits in exactly one row**. It is NOT a marks ranking — the lecturers' quizzes are flat
+  (8–14 marks a lecture) and nobody has pointed at anything yet — so the top band is "a learning
+  outcome names it and it recurs", and the band above it stays empty until the revision lectures
+  (23 and 27 Oct). Four rows have nothing behind them and say so.
 - **Learn as you go** (Check marks each question in place), **mock tests** (mini 12 · full 60, dealt
   in proportion across four groups, least-seen first, misses first), **Pick my rep** (tick any
   quizzes and run them as one), a misses pile, and a score line per browser.
@@ -37,7 +44,6 @@ The final: **Wed 4 Nov 2026 · 1:00–3:40 pm (160 min) · 60 multi-choice + 10 
   this bank until their decks exist; their questions go in `content/authored/`. Eight other
   no-quiz lectures are covered only by the tool's questions — not the lecturers' wording.
   Revision lectures 23 and 27 Oct are where the exam gets pointed at.
-- **The focus checklist** (what to learn, how far, per topic) — owed; every Paper Sim ships one.
 - Slide references under a question, and videos. Not built for this paper.
 - Ten Knowledge Check questions about being a student here (attendance, extensions, online-exam
   rules, netiquette) stay under Pick my rep but are **never dealt into a mock** (`NO_MOCK`).

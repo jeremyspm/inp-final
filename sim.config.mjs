@@ -92,6 +92,16 @@ export const META = {
     authored: '<b>Every row ending “the tool’s questions” was written by this tool, not the lecturers</b>: multi-choice and short-answer questions for the eight taught lectures that have no Canvas quiz, and a short-answer section for the quizzed topics — because the real paper has ten short answers and Canvas has none. Each one is labelled as the tool’s and names the deck and slide it was written from. Marks per short answer are the tool’s (one per point in the model answer); the course has not published them. ',
   },
   focusCopy: {
-    pending: 'The checklist for this paper — every lecture topic, what you must be able to DO, how it gets asked and where it stops — is not built yet. What it has to say first: <b>the lecturers’ 15 quizzes cover 14 of the 26 lectures.</b> Eight more taught lectures (Community Needs Assessment, Tikanga &amp; Kawa Whakaruruhau, Pain Assessment, Family-centred Care, NZ Health Strategy, Discharge Planning, Therapeutic Use of Self, Roles of Nurses) are covered only by questions this tool wrote from their decks — worth doing, but not the lecturers’ wording. Rheumatic Fever has no deck on Canvas yet, and three lectures arrive after the break (Long-term Conditions Fri 9 Oct · Primary Health Care &amp; Health Promotion 14 Oct · Health Screening &amp; Standards of Competence 20 Oct). A clean run here does not mean those four are covered. Revision lectures: <b>Fri 23 Oct and Tue 27 Oct</b> — whatever gets named there goes to the top of this list.',
+    intro: 'One row per lecture — all 26, plus the orientation Knowledge Check. Open a row for what you must be able to DO, how the lecturers’ own quiz asks it, and where it stops. Tick it when you can do it cold. <b>Four rows cannot be ticked honestly yet</b>: Rheumatic Fever has no deck on Canvas, and three lectures are still to come (9, 14 and 20 Oct).',
+    how: '<b>This is not a marks ranking, and it says so.</b> The lecturers’ quizzes give every lecture 8–14 marks, so the bank cannot separate the topics, and as of 19 Sep nobody has said anything about the exam beyond the syllabus: 60 multi-choice + 10 short answers, assessing learning outcomes 1–4. So the top band rests on the only emphasis on record — <b>a topic a learning outcome names outright, whose content also comes back in other lectures</b>. The middle band is everything else examinable, including the eight lectures whose only questions are this tool’s (⚠ no quiz exists). <b>The band above all of them is empty on purpose</b>: it fills from Revision One (Fri 23 Oct) and Revision Two (Tue 27 Oct) — whatever is named there outranks this whole list. Every count on a row is made by the build from the bank, and the build fails unless each of the bank’s questions sits in exactly one row.',
+    sources: 'the 15 Canvas quizzes (153 questions, every stem read), the 22 lecture decks, the course syllabus (learning outcomes and exam shape) and the Canvas timetable.',
+    t1w: 'A learning outcome names these outright, and their content comes back in other lectures — the only emphasis the course has put on record so far.',
+    t3w: 'Thin, or about being a student rather than nursing practice. Read once, then leave.',
+    critLbl: 'Lecture',
+    flagn: {
+      LO1: 'LO1 · nursing process + Te Tiriti', LO2: 'LO2 · determinants & inequities',
+      LO3: 'LO3 · evidence & assessment skills', LO4: 'LO4 · communication',
+      X: 'comes back in other lectures',
+    },
   },
 };
