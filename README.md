@@ -14,6 +14,12 @@ The final: **Wed 4 Nov 2026 · 1:00–3:40 pm (160 min) · 60 multi-choice + 10 
 - **153 questions from 15 Canvas quizzes**, captured from graded attempts on 19 Sep 2026 and parsed
   by the estate's shared parser, unchanged. 153 of 153 keyed, 0 held. Stems, options and keys ship
   exactly as set — 146 multi-choice, 4 true/false, 3 blank questions.
+- **120 questions written by this tool** (19 Sep 2026), every one labelled as the tool's on the page
+  and naming the deck and slide it came from: **62 multi-choice + 23 short answers** for the eight
+  taught lectures that have no Canvas quiz (one row each under Pick my rep), and a **35-question
+  short-answer section** across the 14 quizzed topics (one row per group). They live one file per
+  lecture in `content/authored/`; the build gates a missing source, fewer than two model steps, a
+  bad key or a repeated stem. The full mock now deals the real shape: 60 multi-choice + 10 written.
 - **Learn as you go** (Check marks each question in place), **mock tests** (mini 12 · full 60, dealt
   in proportion across four groups, least-seen first, misses first), **Pick my rep** (tick any
   quizzes and run them as one), a misses pile, and a score line per browser.
@@ -22,15 +28,14 @@ The final: **Wed 4 Nov 2026 · 1:00–3:40 pm (160 min) · 60 multi-choice + 10 
 
 ## What is not in it, said plainly
 
-- **The 10 short-answer questions.** The Canvas quizzes contain no written question at all. The
-  tool's own, each naming the deck it was written from, go in `content/authored-saqs.js`; the page
-  labels them as the tool's. Until then the full mock is the multi-choice section, and says so.
-- **The bank covers 14 of the course's 26 lectures.** Nine taught lectures have no quiz: Community
-  Needs Assessment, Tikanga & Kawa Whakaruruhau, Pain Assessment, Family-centred Care, NZ Health
-  Strategy, Discharge Planning, Therapeutic Use of Self, Roles of Nurses (decks on disk), Rheumatic
-  Fever (no deck on Canvas yet). Three are still to be taught: Long-term Conditions (Fri 9 Oct),
-  Primary Health Care & Health Promotion (14 Oct), Health Screening & Standards of Competence
-  (20 Oct). Examinable, invisible to this bank; their questions go in `content/authored-*.js`.
+- **The lecturers' own short-answer questions.** Canvas has none. All ten written questions in a
+  mock are the tool's, from the decks; the marks per question are unpublished, so each carries one
+  mark per point in its model answer (2–6). Treat them as practice in the shape, not a forecast.
+- **Four of the course's 26 lectures.** Rheumatic Fever was taught but has no deck on Canvas yet.
+  Three are still to be taught: Long-term Conditions (Fri 9 Oct), Primary Health Care & Health
+  Promotion (14 Oct), Health Screening & Standards of Competence (20 Oct). Examinable, invisible to
+  this bank until their decks exist; their questions go in `content/authored/`. Eight other
+  no-quiz lectures are covered only by the tool's questions — not the lecturers' wording.
   Revision lectures 23 and 27 Oct are where the exam gets pointed at.
 - **The focus checklist** (what to learn, how far, per topic) — owed; every Paper Sim ships one.
 - Slide references under a question, and videos. Not built for this paper.
@@ -49,7 +54,7 @@ shared, byte-identical, with every other META-driven sim (`node shared-check.mjs
 | `build.mjs` | bank + `content/` → `index.html`; gates fail the build both ways |
 | `stem-html.mjs` · `bind-images.mjs` | structured stems and images from the same captures |
 | `resplice.mjs` | template-only change → re-splice onto the bank already in `index.html` |
-| `content/` | authored layers (all labelled as the tool's on the page); most are empty for now |
+| `content/` | authored layers (all labelled as the tool's on the page); `content/authored/` holds the tool's questions, one file per lecture |
 
 ```
 # re-parse after new captures land in _inbox/INP Capture (INPCAP-<quizid>.html)

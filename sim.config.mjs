@@ -1,7 +1,8 @@
 /* Everything that makes this sim INP rather than HS2 lives in this one file.
    template.html, build.mjs, stem-html.mjs, bind-images.mjs, resplice.mjs and
    content/explain.mjs are the shared Paper Sim pipeline: a new sim is
-   template + bank + this file (EXAM-ROOM-SPEC §3a). Nothing here authors a question. */
+   template + bank + this file (EXAM-ROOM-SPEC §3a). Nothing here authors a question:
+   the tool’s own questions live in content/authored/, one file per lecture. */
 
 export const PATHS = {
   /* bank/questions.json is written by the shared parser, unchanged:
@@ -73,7 +74,7 @@ export const META = {
   /* the real paper: "Final Exam - 60 Multi-Choice Questions + 10 Short-Answer Questions", 50%
      (course syllabus); 1300-1540 = 160 min (the Canvas Semester Timetable page, week 15). */
   shape: { closed: 60, saq: 10, minutes: 160, mini: 12 },
-  shapeNote: 'The real paper is <b>160 minutes for 60 multi-choice + 10 short answers</b>. Until the written questions exist, a full mock here is the multi-choice section only — if it takes you more than about 75 minutes, the written section will not fit.',
+  shapeNote: 'The real paper is <b>160 minutes for 60 multi-choice + 10 short answers</b>, and a full mock here has that shape. The multi-choice are dealt mostly from the lecturers’ Canvas quizzes, plus some this tool wrote for lectures that have no quiz. <b>All ten short answers are this tool’s</b>, written from the lecture decks — Canvas has no written questions. The marks per short answer have not been published; here each is worth 2–6, one mark per point in its model answer.',
   sys: {
     care: 'Nursing process & assessment',
     clin: 'Clinical knowledge',
@@ -87,9 +88,10 @@ export const META = {
   help: {
     what: 'Every practice quiz posted on Canvas for <b>Introduction to Nursing Practice</b>, unlocked: sit them as often as you like, marked instantly — or let the tool deal you mixed mock papers from the whole bank. The final is <b>Wed 4 Nov 2026 · 1:00–3:40 pm (160 min) · 60 multi-choice + 10 short-answer · 50% of the paper</b> (course syllabus and Canvas timetable).',
     groups: 'The four groups (Process · Clinical · Population · Professional) are <b>this tool’s sorting</b> of the 15 quizzes, so a mock can be dealt in proportion and you can drill one area. The course itself runs by week, not by theme. One quiz = one lecture topic.',
-    held: '<b>This bank covers 14 of the course’s 26 lectures.</b> Nine lectures already taught have <b>no Canvas quiz at all</b> — Community Needs Assessment, Tikanga &amp; Kawa Whakaruruhau, Pain Assessment, Family-centred Care, NZ Health Strategy, Discharge Planning, Therapeutic Use of Self, Rheumatic Fever, Roles of Nurses — and three are still to come after the break: Long-term Conditions (Fri 9 Oct), Primary Health Care &amp; Health Promotion (14 Oct), Health Screening &amp; Standards of Competence (20 Oct). All twelve are examinable and this bank cannot see them. Questions for them have to be written from the decks, and will be labelled as the tool’s.',
+    held: '<b>The lecturers’ quizzes cover 14 of the course’s 26 lectures.</b> Eight taught lectures with <b>no Canvas quiz</b> — Community Needs Assessment, Tikanga &amp; Kawa Whakaruruhau, Pain Assessment, Family-centred Care, NZ Health Strategy, Discharge Planning, Therapeutic Use of Self, Roles of Nurses — now have questions <b>written by this tool from their lecture decks</b> (the rows ending “the tool’s questions”), each naming its slide. They are a careful reading of the deck, not the lecturers’ wording. <b>Still not covered:</b> Rheumatic Fever (no deck on Canvas yet) and three lectures still to come after the break — Long-term Conditions (Fri 9 Oct), Primary Health Care &amp; Health Promotion (14 Oct), Health Screening &amp; Standards of Competence (20 Oct). All four are examinable and this bank cannot see them yet.',
+    authored: '<b>Every row ending “the tool’s questions” was written by this tool, not the lecturers</b>: multi-choice and short-answer questions for the eight taught lectures that have no Canvas quiz, and a short-answer section for the quizzed topics — because the real paper has ten short answers and Canvas has none. Each one is labelled as the tool’s and names the deck and slide it was written from. Marks per short answer are the tool’s (one per point in the model answer); the course has not published them. ',
   },
   focusCopy: {
-    pending: 'The checklist for this paper — every lecture topic, what you must be able to DO, how it gets asked and where it stops — is not built yet. What it has to say first: <b>the 15 quizzes below cover 14 of the 26 lectures.</b> Nine taught lectures have no quiz (Community Needs Assessment, Tikanga &amp; Kawa Whakaruruhau, Pain Assessment, Family-centred Care, NZ Health Strategy, Discharge Planning, Therapeutic Use of Self, Rheumatic Fever, Roles of Nurses) and three more arrive after the break (Long-term Conditions Fri 9 Oct · Primary Health Care &amp; Health Promotion 14 Oct · Health Screening &amp; Standards of Competence 20 Oct). A clean run here does not mean those are covered. Revision lectures: <b>Fri 23 Oct and Tue 27 Oct</b> — whatever gets named there goes to the top of this list.',
+    pending: 'The checklist for this paper — every lecture topic, what you must be able to DO, how it gets asked and where it stops — is not built yet. What it has to say first: <b>the lecturers’ 15 quizzes cover 14 of the 26 lectures.</b> Eight more taught lectures (Community Needs Assessment, Tikanga &amp; Kawa Whakaruruhau, Pain Assessment, Family-centred Care, NZ Health Strategy, Discharge Planning, Therapeutic Use of Self, Roles of Nurses) are covered only by questions this tool wrote from their decks — worth doing, but not the lecturers’ wording. Rheumatic Fever has no deck on Canvas yet, and three lectures arrive after the break (Long-term Conditions Fri 9 Oct · Primary Health Care &amp; Health Promotion 14 Oct · Health Screening &amp; Standards of Competence 20 Oct). A clean run here does not mean those four are covered. Revision lectures: <b>Fri 23 Oct and Tue 27 Oct</b> — whatever gets named there goes to the top of this list.',
   },
 };

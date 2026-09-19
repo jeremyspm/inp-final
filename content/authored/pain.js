@@ -1,0 +1,80 @@
+/* Pain Assessment — THE TOOL's questions. The lecture has no Canvas quiz, so these were
+   written from the lecture deck "Pain Assessment BN2.pptx" and the class handout
+   "Pain Assessment Practice Handout.pdf" (Canvas, harvested 19 Sep 2026).
+   Every entry names the slide it was written from. */
+const R = { sys: 'care', quiz: 'a-pain', quizName: 'Pain Assessment — the tool’s questions' };
+const D = 'the Pain Assessment deck, ';
+
+export const MCQS = [
+  { ...R, q: '“Pain is whatever the experiencing person says it is, existing wherever they say it does.” What does this definition mean for a nurse assessing pain?',
+    options: ['Pain is only real when vital signs have changed', 'The person’s own report is the measure that matters — pain is subjective', 'Pain should be rated by the nurse from the person’s behaviour', 'Pain without a visible injury should be recorded as anxiety'],
+    correct: 1,
+    why: 'McCaffery’s definition makes pain subjective: an individual, multifactorial experience shaped by culture and previous pain. The lecture notes say it outright — always remember that the patient’s rating is what matters.',
+    src: D + 'slides 7–8 and the speaker notes to slide 34' },
+  { ...R, q: 'Nociception communicates tissue damage to the central nervous system through four processes. Which list names them?',
+    options: ['Transduction, transmission, perception, modulation', 'Onset, location, duration, severity', 'Absorption, distribution, metabolism, excretion', 'Sensation, reflex, response, recovery'],
+    correct: 0,
+    why: 'Nociception is the physiological process that communicates tissue damage to the CNS: transduction, transmission, perception and modulation. Perception is where pain is recognised and given meaning — in the brain, at no single known location.',
+    src: D + 'slides 9 and 11' },
+  { ...R, q: 'A man with long-standing diabetes describes the pain in his feet as burning and shooting, “like electric shocks”, and says even the bed sheet touching them hurts. Which type of pain is this?',
+    options: ['Superficial somatic pain', 'Visceral pain', 'Neuropathic pain', 'Referred pain'],
+    correct: 2,
+    why: 'Neuropathic pain comes from injury or dysfunction of the nervous system — abnormal processing of stimuli. It feels shooting, burning, numb or electric-shock-like, with pain on light touch. Diabetes, shingles and multiple sclerosis are the deck’s common causes.',
+    src: D + 'slides 16–18' },
+  { ...R, q: 'A woman describes her abdominal pain as crampy, squeezing and hard to point to — “it’s sort of all through here”. Which type of pain do these words suggest?',
+    options: ['Visceral nociceptive pain', 'Superficial somatic pain', 'Neuropathic pain', 'Deep somatic pain'],
+    correct: 0,
+    why: 'Visceral pain comes from nociceptors in the internal organs and body-cavity linings (inflammation, stretching, ischaemia). It is diffuse and may be referred, and feels crampy, squeezing, colicky or gnawing. Somatic pain is localised — sharp, aching, throbbing.',
+    src: D + 'slides 13–14 and 37' },
+  { ...R, q: 'Which statement about acute pain matches the Pain Assessment lecture?',
+    options: ['It persists beyond the expected time of healing', 'Its cause is usually unknown', 'It is characterised by periods of waxing and waning', 'It lasts less than 3–6 months and warns of injury'],
+    correct: 3,
+    why: 'Acute pain warns of injury and limits further damage, lasts less than 3–6 months, usually has an identifiable cause and fades as recovery occurs (post-operative, labour, trauma). The other three describe chronic pain. Unrelieved acute pain can lead to chronic pain.',
+    src: D + 'slides 23–25' },
+  { ...R, q: 'Which set of findings is the SYMPATHETIC (“fight or flight”) response to pain?',
+    options: ['Nausea and vomiting, fainting, and a fall in blood pressure and pulse rate', 'Raised blood pressure, pulse and respiratory rate, dilated pupils, pallor', 'Grimacing, moaning, guarding the painful area and refusing to move', 'A slow pulse, warm flushed skin, constricted pupils and slow breathing'],
+    correct: 1,
+    why: 'Sympathetic: increased BP, pulse and respiratory rate, pupil dilation, muscle tension and rigidity, pallor. Parasympathetic: nausea and vomiting, fainting, decreased BP and pulse. Grimacing and guarding are voluntary (behavioural) responses. A person does not have to show any of them to be in pain.',
+    src: D + 'slides 26–27' },
+  { ...R, q: 'During a pain assessment a man says his flank pain “gets worse when I move or pass urine”. Under which letter of OLDCARTS does the nurse record this?',
+    options: ['O', 'C', 'A', 'T'],
+    correct: 2,
+    why: 'A = Aggravating factors — what makes it worse (moving, walking, breathing, urinating, swallowing…). O is onset, C is characteristics (what it feels like) and T is timing (pattern and frequency, day or night).',
+    src: D + 'slides 33 and 38; scenario from the Pain Assessment Practice Handout (James)' },
+  { ...R, q: 'For which group does the Pain Assessment lecture say the Wong-Baker FACES scale is especially helpful?',
+    options: ['Adults with chronic pain who already keep a daily pain diary', 'Patients on opioid infusions or patient-controlled analgesia', 'Anyone whose pain has already been rated above 7/10 on a numerical scale', 'Children, non-verbal people, or where there is a language barrier'],
+    correct: 3,
+    why: 'FACES is especially helpful for children, non-verbal persons or if there is a language barrier: the person picks the face that shows how they feel right now. Whatever scale is used, use the same one each time so the effect of pain relief can be compared.',
+    src: D + 'slides 41 and 43' },
+  { ...R, q: 'The Pain Assessment lecture calls pain “the 5th vital sign”. When does it say pain should be assessed?',
+    options: ['Only when the person reports pain or asks for pain relief', 'Regularly, and before and after any therapeutic intervention', 'Once per shift, at the same time as the other four vital signs', 'On admission, and again when the person is ready for discharge'],
+    correct: 1,
+    why: 'Pain should be assessed on a regular basis and before and after any therapeutic intervention, and documented in the care plan and the patient’s notes using a standardised tool — that is how the team knows whether the intervention worked.',
+    src: D + 'slides 31 and 47' },
+];
+
+export const SAQS = [
+  { ...R, pts: 4, q: 'OLDCARTS is the structured pain assessment tool taught in this course. State what each of its eight letters stands for.',
+    steps: [
+      'O = Onset (when did it start?) · L = Location (where is it? does it radiate?)',
+      'D = Duration (how long does it last? does it come and go?) · C = Characteristics (what does it feel like?)',
+      'A = Aggravating factors (what makes it worse?) · R = Relieving factors (what makes it better — medications and other interventions)',
+      'T = Timing (pattern or frequency, day or night) · S = Severity (rated with an appropriate pain scale, e.g. 0–10 at rest and on movement)',
+    ],
+    src: D + 'slides 33–42' },
+  { ...R, pts: 4, q: 'Distinguish nociceptive pain from neuropathic pain. For each, give the cause and how the person typically describes it.',
+    steps: [
+      'Nociceptive (physiological) pain — cause: damage to somatic or visceral tissue activates the normal pain pathway (e.g. cuts, fractures, burns, post-operative pain).',
+      'Nociceptive pain feels: somatic = localised, sharp, aching, throbbing; visceral = diffuse or referred, crampy, squeezing, colicky, gnawing.',
+      'Neuropathic (pathophysiological) pain — cause: injury, lesion or dysfunction of the peripheral or central nervous system, so stimuli are processed abnormally (e.g. diabetes, shingles, multiple sclerosis, herniated disc).',
+      'Neuropathic pain feels: burning, shooting, stabbing, electric-shock-like, numbness, pain on light touch and increased sensitivity to pain.',
+    ],
+    src: D + 'slides 12–18' },
+  { ...R, pts: 3, q: 'Give two voluntary (behavioural) and two involuntary (physiological) responses to pain. Must a person show these signs to be in pain?',
+    steps: [
+      'Voluntary / behavioural (any two): moving away from the painful stimulus · grimacing, moaning, crying · restlessness · guarding — protecting the area and refusing to move.',
+      'Involuntary / physiological (any two): sympathetic — raised BP, pulse and respiratory rate, dilated pupils, muscle tension, pallor; or parasympathetic — nausea and vomiting, fainting, lowered BP and pulse.',
+      'No. Pain is subjective — it is what the person says it is. Some people are stoic or whakamā about admitting pain, or want to appear strong, so the absence of signs does not mean the absence of pain.',
+    ],
+    src: D + 'slides 7 and 26–28' },
+];
