@@ -27,8 +27,8 @@ The final: **Wed 4 Nov 2026 · 1:00–3:40 pm (160 min) · 60 multi-choice + 10 
   labels them as the tool's. Until then the full mock is the multi-choice section, and says so.
 - **The bank covers 14 of the course's 26 lectures.** Nine taught lectures have no quiz: Community
   Needs Assessment, Tikanga & Kawa Whakaruruhau, Pain Assessment, Family-centred Care, NZ Health
-  Strategy, Discharge Planning, Therapeutic Use of Self (decks on disk), Rheumatic Fever, Roles of
-  Nurses (16 Sep — not harvested yet). Three are still to be taught: Long-term Conditions (7 Oct),
+  Strategy, Discharge Planning, Therapeutic Use of Self, Roles of Nurses (decks on disk), Rheumatic
+  Fever (no deck on Canvas yet). Three are still to be taught: Long-term Conditions (Fri 9 Oct),
   Primary Health Care & Health Promotion (14 Oct), Health Screening & Standards of Competence
   (20 Oct). Examinable, invisible to this bank; their questions go in `content/authored-*.js`.
   Revision lectures 23 and 27 Oct are where the exam gets pointed at.
