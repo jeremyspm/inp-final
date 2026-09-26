@@ -63,8 +63,10 @@ export const NO_IMAGE_OK = [];
 export const META = {
   id: 'inp-final',
   prefix: 'inpf.',
-  title: 'INP · Paper Sim — Final exam',
-  h1: 'INP · Paper Sim',
+  title: 'INP Final · Paper Sim',
+  h1: 'INP Final exam · Paper Sim',
+  /* the home title card, header stripe and tab icon: what tells the four Paper Sims apart */
+  tool: { kick: 'Intro to Nursing Practice · 722.556', name: 'INP Final exam', sub: '60 multi-choice + 10 short answers · 160 min', icon: '🩺', hue: '#16a34a' },
   short: 'INP Paper Sim',
   paper: 'Introduction to Nursing Practice',
   bankOf: 'the INP lecturers’',          // "dealt from … whole question bank"
