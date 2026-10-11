@@ -72,11 +72,16 @@ export const META = {
   bankOf: 'the INP lecturers’',          // "dealt from … whole question bank"
   who: 'the INP lecturers',              // "Model answers are the tool’s, not …’s"
   aiCtx: 'I’m a first-year nursing student in New Zealand sitting the final exam for Introduction to Nursing Practice (60 multiple-choice + 10 short-answer questions).',
-  sitting: { what: 'the INP final', date: '2026-11-04', when: 'Wed 4 Nov · 1:00–3:40 pm (room opens 12:30)', cohortClose: null },
+  /* moved 2 Oct 2026 from Wed 4 Nov 1300-1540: the Canvas calendar event "Final Exam" is Mon 2 Nov 08:00–16:00, rooms
+     214, 215 & 314, and the Semester Timetable page (week 15) says "Mon 2/November: 0800-1600 - x2 sittings". Neither
+     gives which sitting a student is in or how long one runs. */
+  sitting: { what: 'the INP final', date: '2026-11-02', when: 'Mon 2 Nov · one of two sittings between 8 am and 4 pm, rooms 214, 215 and 314 (sitting times not published yet)', cohortClose: null },
   /* the real paper: "Final Exam - 60 Multi-Choice Questions + 10 Short-Answer Questions", 50%
-     (course syllabus); 1300-1540 = 160 min (the Canvas Semester Timetable page, week 15). */
+     (course syllabus as of Aug 2026); 160 min = the OLD 1300-1540 slot on the Semester Timetable page, kept as the mock's
+     timer because no length has been published for the new sittings. NB on 12 Oct 2026 the syllabus reads "40 Multi-
+     Choice Questions + 15 Short-Answer Questions" — the page says so; the mock shape has not been changed to match yet. */
   shape: { closed: 60, saq: 10, minutes: 160, mini: 12 },
-  shapeNote: 'The real paper is <b>160 minutes for 60 multi-choice + 10 short answers</b>, and a full mock here has that shape. The multi-choice are dealt mostly from the lecturers’ Canvas quizzes, plus some this tool wrote for lectures that have no quiz. <b>All ten short answers are this tool’s</b>, written from the lecture decks — Canvas has no written questions. The marks per short answer have not been published; here each is worth 2–6, one mark per point in its model answer.',
+  shapeNote: 'A full mock here is <b>60 multi-choice + 10 short answers in 160 minutes</b> — the paper as the course syllabus and the old 1:00–3:40 pm timetable slot gave it. <b>Two things have changed since:</b> the syllabus now lists the paper as <b>40 multi-choice + 15 short answers</b>, and the exam moved to Mon 2 Nov in two sittings with no length published. The mock has not been changed to match yet. The multi-choice are dealt mostly from the lecturers’ Canvas quizzes, plus some this tool wrote for lectures that have no quiz. <b>All ten short answers are this tool’s</b>, written from the lecture decks — Canvas has no written questions. The marks per short answer have not been published; here each is worth 2–6, one mark per point in its model answer.',
   sys: {
     care: 'Nursing process & assessment',
     clin: 'Clinical knowledge',
@@ -88,7 +93,7 @@ export const META = {
   playlist: null,
   refLbl: { slide: 'Their slide', her: 'Their notes', course: 'Course file', patton: 'Textbook' },
   help: {
-    what: 'Every practice quiz posted on Canvas for <b>Introduction to Nursing Practice</b>, unlocked: sit them as often as you like, marked instantly — or let the tool deal you mixed mock papers from the whole bank. The final is <b>Wed 4 Nov 2026 · 1:00–3:40 pm (160 min) · 60 multi-choice + 10 short-answer · 50% of the paper</b> (course syllabus and Canvas timetable).',
+    what: 'Every practice quiz posted on Canvas for <b>Introduction to Nursing Practice</b>, unlocked: sit them as often as you like, marked instantly — or let the tool deal you mixed mock papers from the whole bank. The final is <b>Mon 2 Nov 2026 · one of two sittings between 8 am and 4 pm · rooms 214, 215 &amp; 314 · 50% of the paper</b> (Canvas calendar and timetable; which sitting you are in, and how long it runs, are not published yet). The syllabus now lists the paper as <b>40 multi-choice + 15 short answers</b> — it said 60 + 10 when this tool was built, and the mocks here still deal 60 + 10.',
     groups: 'The four groups (Process · Clinical · Population · Professional) are <b>this tool’s sorting</b> of the 15 quizzes, so a mock can be dealt in proportion and you can drill one area. The course itself runs by week, not by theme. One quiz = one lecture topic.',
     held: '<b>The lecturers’ quizzes cover 14 of the course’s 26 lectures.</b> Eight taught lectures with <b>no Canvas quiz</b> — Community Needs Assessment, Tikanga &amp; Kawa Whakaruruhau, Pain Assessment, Family-centred Care, NZ Health Strategy, Discharge Planning, Therapeutic Use of Self, Roles of Nurses — now have questions <b>written by this tool from their lecture decks</b> (the rows ending “the tool’s questions”), each naming its slide. They are a careful reading of the deck, not the lecturers’ wording. <b>Still not covered:</b> Rheumatic Fever (no deck on Canvas yet) and three lectures still to come after the break — Long-term Conditions (Fri 9 Oct), Primary Health Care &amp; Health Promotion (14 Oct), Health Screening &amp; Standards of Competence (20 Oct). All four are examinable and this bank cannot see them yet.',
     authored: '<b>Every row ending “the tool’s questions” was written by this tool, not the lecturers</b>: multi-choice and short-answer questions for the eight taught lectures that have no Canvas quiz, and a short-answer section for the quizzed topics — because the real paper has ten short answers and Canvas has none. Each one is labelled as the tool’s and names the deck and slide it was written from. Marks per short answer are the tool’s (one per point in the model answer); the course has not published them. ',

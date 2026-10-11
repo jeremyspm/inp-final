@@ -6,8 +6,11 @@ Every practice quiz posted on Canvas for **Introduction to Nursing Practice (722
 sit them as often as you like, marked instantly, or let the tool deal mock papers from the whole
 bank in the real paper's shape. Same format as [hs2-test2](https://jeremyspm.github.io/hs2-test2/).
 
-The final: **Wed 4 Nov 2026 · 1:00–3:40 pm (160 min) · 60 multi-choice + 10 short-answer · 50%**
-(course syllabus; times from the Canvas Semester Timetable page).
+The final: **Mon 2 Nov 2026 · two sittings between 08:00 and 16:00 · rooms 214, 215 & 314 · 50%**
+(moved on 2 Oct 2026 from Wed 4 Nov 1:00–3:40 pm; Canvas calendar + Semester Timetable page). Which sitting
+a student is in, and how long it runs, are not published yet; the mock keeps the old slot's **160 min**.
+**The syllabus now says 40 multi-choice + 15 short-answer** (it said 60 + 10 in August); the mock still
+deals 60 + 10 and the page says so.
 
 ## What is in it
 
