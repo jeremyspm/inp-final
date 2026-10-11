@@ -6,11 +6,11 @@ Every practice quiz posted on Canvas for **Introduction to Nursing Practice (722
 sit them as often as you like, marked instantly, or let the tool deal mock papers from the whole
 bank in the real paper's shape. Same format as [hs2-test2](https://jeremyspm.github.io/hs2-test2/).
 
-The final: **Mon 2 Nov 2026 · two sittings between 08:00 and 16:00 · rooms 214, 215 & 314 · 50%**
-(moved on 2 Oct 2026 from Wed 4 Nov 1:00–3:40 pm; Canvas calendar + Semester Timetable page). Which sitting
-a student is in, and how long it runs, are not published yet; the mock keeps the old slot's **160 min**.
-**The syllabus now says 40 multi-choice + 15 short-answer** (it said 60 + 10 in August); the mock still
-deals 60 + 10 and the page says so.
+The final: **Mon 2 Nov 2026 · two sittings between 08:00 and 16:00 · rooms 214, 215 & 314 ·
+40 multi-choice + 15 short-answer · 50%** (moved on 2 Oct 2026 from Wed 4 Nov 1:00–3:40 pm; Canvas
+calendar + Semester Timetable page; the syllabus said 60 + 10 until October, and the mock followed it
+to 40 + 15 on 12 Oct). Which sitting a student is in, and how long it runs, are not published yet;
+the mock keeps the old slot's **160 min**.
 
 ## What is in it
 
@@ -22,7 +22,7 @@ deals 60 + 10 and the page says so.
   taught lectures that have no Canvas quiz (one row each under Pick my rep), and a **35-question
   short-answer section** across the 14 quizzed topics (one row per group). They live one file per
   lecture in `content/authored/`; the build gates a missing source, fewer than two model steps, a
-  bad key or a repeated stem. The full mock now deals the real shape: 60 multi-choice + 10 written.
+  bad key or a repeated stem. The full mock deals the real shape: 40 multi-choice + 15 written.
 - **The focus checklist** (`content/focus.js`, 27 rows: the 26 lectures + the orientation Knowledge
   Check): per row what you must be able to DO, how the lecturers' own quiz asks it, where it stops.
   Each row names where its questions come from and **the build counts them and fails unless every
@@ -30,7 +30,12 @@ deals 60 + 10 and the page says so.
   (8–14 marks a lecture) and nobody has pointed at anything yet — so the top band is "a learning
   outcome names it and it recurs", and the band above it stays empty until the revision lectures
   (23 and 27 Oct). Four rows have nothing behind them and say so.
-- **Learn as you go** (Check marks each question in place), **mock tests** (mini 12 · full 60, dealt
+  **The lecturers' Exam Content page** (8 Oct 2026, 29 themes in one flat list) names 26 of the 27
+  rows — all but the Knowledge Check. Each named row carries flag `EC` (chip "📌 on the exam themes
+  list") and `crit` = the page's exact wording plus what this bank lacks for it (injections, wound
+  assessment, scope of practice, upstream/midstream/downstream: no question asks them). It ranks
+  nothing, but it lifted Self-care and Roles of Nurses out of the bottom band.
+- **Learn as you go** (Check marks each question in place), **mock tests** (mini 12 · full 40 + 15, dealt
   in proportion across four groups, least-seen first, misses first), **Pick my rep** (tick any
   quizzes and run them as one), a misses pile, and a score line per browser.
 - The four groups — Process · Clinical · Population · Professional — are **this tool's sorting** of
@@ -38,13 +43,14 @@ deals 60 + 10 and the page says so.
 
 ## What is not in it, said plainly
 
-- **The lecturers' own short-answer questions.** Canvas has none. All ten written questions in a
+- **The lecturers' own short-answer questions.** Canvas has none. All fifteen written questions in a
   mock are the tool's, from the decks; the marks per question are unpublished, so each carries one
   mark per point in its model answer (2–6). Treat them as practice in the shape, not a forecast.
-- **Four of the course's 26 lectures.** Rheumatic Fever was taught but has no deck on Canvas yet.
-  Three are still to be taught: Long-term Conditions (Fri 9 Oct), Primary Health Care & Health
-  Promotion (14 Oct), Health Screening & Standards of Competence (20 Oct). Examinable, invisible to
-  this bank until their decks exist; their questions go in `content/authored/`. Eight other
+- **Four of the course's 26 lectures.** Rheumatic Fever (decks on Canvas since 20 and 22 Sep) and
+  Long-term Conditions (taught 9 Oct, deck on Canvas) have no questions written from them yet. Two
+  are still to be taught: Primary Health Care & Health Promotion (14 Oct), Health Screening &
+  Standards of Competence (20 Oct). All four are on the Exam Content list; their questions go in
+  `content/authored/`. Eight other
   no-quiz lectures are covered only by the tool's questions — not the lecturers' wording.
   Revision lectures 23 and 27 Oct are where the exam gets pointed at.
 - Slide references under a question, and videos. Not built for this paper.
