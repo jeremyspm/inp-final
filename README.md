@@ -23,17 +23,24 @@ the mock keeps the old slot's **160 min**.
   short-answer section** across the 14 quizzed topics (one row per group). They live one file per
   lecture in `content/authored/`; the build gates a missing source, fewer than two model steps, a
   bad key or a repeated stem. The full mock deals the real shape: 40 multi-choice + 15 written.
-- **The focus checklist** (`content/focus.js`, 27 rows: the 26 lectures + the orientation Knowledge
-  Check): per row what you must be able to DO, how the lecturers' own quiz asks it, where it stops.
+- **45 more written by this tool on 12 Oct 2026** (35 multi-choice + 10 short answers, every
+  written one with a short version): **Rheumatic Fever** (`rf.js`, 12 + 4, from Janine's deck and
+  the KidzFirst guest speaker's), **Long-term Conditions & Self-management** (`ltc.js`, 12 + 3, from
+  the deck and the Te Kete Haerenga workbook posted with it) and **Injections** (`injections.js`,
+  11 + 3, from the Clinical Learning Suite page "Inpatient Prep – Injections" — the Exam Content
+  list names injections, no lecture teaches them). Key-longest 14% (5 of 35), key positions A–D 9/9/9/8.
+  The two RF decks disagree on the acute antibiotic, so no question turns on it. Bank now 318.
+- **The focus checklist** (`content/focus.js`, 28 rows: the 26 lectures + injections + the
+  orientation Knowledge Check): per row what you must be able to DO, how the lecturers' own quiz asks it, where it stops.
   Each row names where its questions come from and **the build counts them and fails unless every
   question sits in exactly one row**. It is NOT a marks ranking — the lecturers' quizzes are flat
   (8–14 marks a lecture) and nobody has pointed at anything yet — so the top band is "a learning
   outcome names it and it recurs", and the band above it stays empty until the revision lectures
-  (23 and 27 Oct). Four rows have nothing behind them and say so.
-  **The lecturers' Exam Content page** (8 Oct 2026, 29 themes in one flat list) names 26 of the 27
+  (23 and 27 Oct). Two rows (the lectures still to come) have nothing behind them and say so.
+  **The lecturers' Exam Content page** (8 Oct 2026, 29 themes in one flat list) names 27 of the 28
   rows — all but the Knowledge Check. Each named row carries flag `EC` (chip "📌 on the exam themes
-  list") and `crit` = the page's exact wording plus what this bank lacks for it (injections, wound
-  assessment, scope of practice, upstream/midstream/downstream: no question asks them). It ranks
+  list") and `crit` = the page's exact wording plus what this bank lacks for it (wound assessment,
+  scope of practice, upstream/midstream/downstream: no question asks them). It ranks
   nothing, but it lifted Self-care and Roles of Nurses out of the bottom band.
 - **Learn as you go** (Check marks each question in place), **mock tests** (mini 12 · full 40 + 15, dealt
   in proportion across four groups, least-seen first, misses first), **Pick my rep** (tick any
@@ -46,12 +53,10 @@ the mock keeps the old slot's **160 min**.
 - **The lecturers' own short-answer questions.** Canvas has none. All fifteen written questions in a
   mock are the tool's, from the decks; the marks per question are unpublished, so each carries one
   mark per point in its model answer (2–6). Treat them as practice in the shape, not a forecast.
-- **Four of the course's 26 lectures.** Rheumatic Fever (decks on Canvas since 20 and 22 Sep) and
-  Long-term Conditions (taught 9 Oct, deck on Canvas) have no questions written from them yet. Two
-  are still to be taught: Primary Health Care & Health Promotion (14 Oct), Health Screening &
-  Standards of Competence (20 Oct). All four are on the Exam Content list; their questions go in
-  `content/authored/`. Eight other
-  no-quiz lectures are covered only by the tool's questions — not the lecturers' wording.
+- **Two of the course's 26 lectures**, still to be taught: Primary Health Care & Health Promotion
+  (14 Oct), Health Screening & Standards of Competence (20 Oct). Both are on the Exam Content list;
+  their questions go in `content/authored/` once the decks are on Canvas. Ten other no-quiz
+  lectures (and injections) are covered only by the tool's questions — not the lecturers' wording.
   Revision lectures 23 and 27 Oct are where the exam gets pointed at.
 - Slide references under a question, and videos. Not built for this paper.
 - Ten Knowledge Check questions about being a student here (attendance, extensions, online-exam

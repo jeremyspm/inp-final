@@ -1,5 +1,6 @@
-/* focus.js — what to learn for the INP final, and how far. One row per lecture (26) plus the
- * orientation Knowledge Check, in the format hs2-test2 set (estate rule 2026-09-17).
+/* focus.js — what to learn for the INP final, and how far. One row per lecture (26), plus the
+ * CLS injections page (12 Oct 2026: the Exam Content list names injections, no lecture teaches
+ * them) and the orientation Knowledge Check, in the format hs2-test2 set (estate rule 2026-09-17).
  *
  * WHERE THE NUMBERS COME FROM. Nothing here is counted by hand: each row says where its
  * questions live (`from`), and build.mjs fills n / pts / qz / saq / na and FAILS unless every
@@ -105,7 +106,7 @@ export const FOCUS = [
   ask:'Terminology and ranges: “RR of 32 is called…”, “temperature below 35 is…”, “normal SpO₂”, “what does A in AVPU stand for”, “first Korotkoff sound represents…”, “irregular pulse — what do you do”. Three keys are “All of these”.',
   cap:'You already passed the practical. The exam side is words and numbers, not technique. The exact EWS scoring bands are not asked — only its purpose.',
   src:'Vital Signs 2026 deck · Vital Signs quiz',
-  crit:'“Vital signs, injections, blood glucose monitoring”, and the “Emergency assessment” of the assessment line (the primary survey, A–E). Injections are taught on the Clinical Learning Suite page “Inpatient Prep – Injections”, not in a lecture, and no question here asks them. Blood glucose numbers sit under Diabetes; the procedure is on “Inpatient Prep – Blood Glucose Assessment”.' },
+  crit:'“Vital signs, injections, blood glucose monitoring”, and the “Emergency assessment” of the assessment line (the primary survey, A–E). Injections have their own row (from the CLS page “Inpatient Prep – Injections”, since no lecture teaches them). Blood glucose numbers sit under Diabetes; the procedure is on the CLS page “Inpatient Prep – Blood Glucose Assessment”.' },
 
 { id:'ipc', sys:'clin', tier:2, t:'Infection prevention and control', flag:'LO3 EC',
   from:[{ quiz:['210118'] }, W('w-clin','Infection Prevention & Control 2026 deck')],
@@ -195,19 +196,29 @@ export const FOCUS = [
   src:'Therapeutic Use of Self BN2 deck',
   crit:'“Therapeutic use of self, cultural awareness and sensitivity” — the cultural half is covered under Tikanga and Kawa Whakaruruhau.' },
 
-{ id:'rheumatic-fever', sys:'clin', tier:2, t:'Rheumatic fever', flag:'noquiz EC',
-  done:'Two decks are on Canvas now — Rheumatic Fever (posted 20 Sep) and the guest speaker’s (22 Sep), both in Module 8. There is no quiz, and the tool has not written questions from them yet, so nothing here checks you. Read both decks.',
-  ask:'Unknown — no lecturer question exists.',
-  cap:'This row exists so that ticking every other row is not mistaken for covering the course. It gets a proper level once questions are written from the two decks.',
-  src:'Rheumatic Fever deck + Rheumatic Fever – Guest speaker deck (Canvas, Module 8) — no questions written from them yet',
+{ id:'rheumatic-fever', sys:'clin', tier:2, t:'Rheumatic fever and rheumatic heart disease', flag:'LO2 noquiz EC',
+  from:[{ quiz:['a-rf'] }],
+  done:'Define rheumatic fever as an auto-immune response — not an infection, not contagious — to a Group A Strep throat or skin infection that was not treated properly, 1–5 weeks later; say who it mainly affects (Māori and Pacific children aged 4–19) and why (crowding, inequity); list the symptoms — joint pain that moves joint to joint, fever, tiredness, chorea, rash, breathlessness, a new murmur; say how it is diagnosed (no single test: history, throat swab, Strep antibodies, ECG, echo); teach the ongoing care — penicillin every 28 days for at least 10 years or to age 21, never late, extra antibiotic cover and the wallet card before dental visits, every sore throat checked; say what rheumatic heart disease is (scarred mitral and/or aortic valves).',
+  ask:'Nobody knows — no lecturer question exists. The tool’s questions copy the quizzed lectures’ shape: definitions, “who does it affect”, the 28-day rule, and short scenarios (a child with jerky movements, a family going on holiday).',
+  cap:'The two decks disagree on the acute antibiotic (Janine: penicillin; the guest speaker: oral amoxicillin, and “there is no treatment for ARF”), so the tool asks nothing that turns on it. The guest speaker’s hospital detail (CRP, ESR, warfarin and INR checks) goes no further than a list. Her equity slides tie this row to Social Determinants.',
+  src:'Rheumatic Fever deck (Janine Craig) + Rheumatic Fever – Guest speaker deck (Jessica Murray, CNS KidzFirst), Canvas Module 8',
   crit:'“Diabetes, Rheumatic fever”' },
 
 { id:'ltc', sys:'clin', tier:2, t:'Long-term conditions and self-management', flag:'noquiz EC',
-  done:'Taught Fri 9 Oct. The deck — Self-management support for people with long-term conditions 2026 — and a PDF, Te Kete Haerenga, went up on Canvas that afternoon (Module 9). There is no quiz, and the tool has not written questions from them yet, so nothing here checks you. Read the deck.',
-  ask:'Unknown — no lecturer question exists.',
-  cap:'Sits straight on top of Diabetes and Health Literacy (self-management), so those two rows are the preparation.',
-  src:'Self-management support for people with long-term conditions 2026 deck (Canvas, Module 9) — no questions written from it yet',
+  from:[{ quiz:['a-ltc'] }],
+  done:'Define a long-term condition (over 6 months, ongoing or recurring, a significant impact; also called NCDs), self-management (any way a person manages their own condition — ongoing, not one-off) and self-management support; list what a good self-manager does; say why interdependence matters to Māori, Pacific and South Asian peoples; name Wagner’s six components and define patient activation; say what Journey to Wellbeing — Huarahi Ora changed (whānau inclusive, culturally safe, community-designed); give the nurse’s role and the four essential components of programmes; work the asthma and coeliac examples.',
+  ask:'Nobody knows — no lecturer question exists. The deck’s own learning outcomes are “define”, “describe”, “identify” — short-answer verbs — and its last third is three “what would this person need to know and have access to?” cases: asthma, coeliac disease, CRPS.',
+  cap:'Huarahi Ora’s 7 principles are on picture-only slides, and the CRPS case was a group exercise with no text — neither is asked. Te Kete Haerenga is a patient workbook; two questions come from it (its SMART ends in Trackable, not the care-plan template’s timely; its wheel is Te Whare Tapa Whā). Sits straight on top of Diabetes and Health Literacy.',
+  src:'Self-management support for people with long-term conditions 2026 deck + Te Kete Haerenga workbook (Canvas, Module 9)',
   crit:'“Long term conditions & self-management”' },
+
+{ id:'injections', sys:'clin', tier:2, t:'Injections — routes, angles and sites (CLS Inpatient Prep)', flag:'noquiz EC',
+  from:[{ quiz:['a-inject'] }],
+  done:'Name the four parenteral routes and where each deposits the medicine (ID dermis · SC below the dermis · IM muscle · IV vein) with the angles (ID 15° · SC 45°, or 90° if 5 cm can be grasped · IM 90°); pick a subcutaneous site (the abdomen for heparin and insulin) and explain insulin site rotation and lipodystrophy; say why IM absorbs faster (muscle is more vascular); give the three IM sites with their maximum volumes and cautions (vastus lateralis 5 ml · ventrogluteal 4 ml, safe for all · deltoid 2 ml, radial and ulnar nerves); list what to check before choosing an IM site; give the advantages and disadvantages, including avoiding SC, IM and ID with bleeding tendencies.',
+  ask:'Nobody knows — no lecturer question exists and no lecture teaches it. The exam themes list names injections beside vital signs and blood glucose monitoring; the only course material is this Clinical Learning Suite page.',
+  cap:'Technique — drawing up from ampoules and vials, reconstituting, giving the injection — is the CLS practical and the Potter & Perry workbooks it links, not this page; the exam side is routes, angles, sites, volumes and reasons. Blood glucose monitoring has its own CLS page; its numbers are under Diabetes.',
+  src:'CLS page “Inpatient Prep – Injections” (Canvas; adapted from Potter & Perry, ANZ ed. 2026)',
+  crit:'“Vital signs, injections, blood glucose monitoring” — the injections part.' },
 
 { id:'phc', sys:'pop', tier:2, t:'Primary health care and health promotion', flag:'untaught EC',
   done:'Not taught yet — Wed 14 Oct.',
