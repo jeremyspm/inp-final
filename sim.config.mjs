@@ -68,6 +68,7 @@ export const META = {
   /* the home title card, header stripe and tab icon: what tells the four Paper Sims apart */
   tool: { kick: 'Intro to Nursing Practice · 722.556', name: 'INP Final exam', sub: '40 multi-choice + 15 short answers · 160 min', icon: '🩺', hue: '#16a34a' },
   short: 'INP Paper Sim',
+  hub: 'inp/exam',                       // its exam on the hub (jeremyspm.github.io/#inp/exam): where ‹ Home and the header link go
   paper: 'Introduction to Nursing Practice',
   bankOf: 'the INP lecturers’',          // "dealt from … whole question bank"
   who: 'the INP lecturers',              // "Model answers are the tool’s, not …’s"
