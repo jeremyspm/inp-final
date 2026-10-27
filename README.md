@@ -90,7 +90,7 @@ the mock keeps the old slot's **160 min**.
 - Ten Knowledge Check questions about being a student here (attendance, extensions, online-exam
   rules, netiquette) stay under Pick my rep but are **never dealt into a mock** (`NO_MOCK`).
 
-## Learn the short answers (`rep.html`) and Flashcards (`cards.html`)
+## Write the short answers (`rep.html`) and Flashcards (`cards.html`)
 
 Lisa sets no practice short answers.
 
@@ -116,6 +116,14 @@ intervals, starting ease, easy bonus, hard interval, interval modifier, maximum 
 order, the 4 am rollover), with export, import and reset. The scheduler is `srs-engine.mjs` — Anki's SM-2 with its v3
 defaults, not FSRS — and `node cards.check.mjs` checks it against Anki's rules. The Decks screen says when the
 new-card limit will not reach every card before the exam. Progress lives under `<prefix>srs.v1`.
+
+**Toned down, the same night** ("no one needs to know or see those settings", "the CSS is way too much"): the
+Flashcards page is now Decks only. Browse, Stats, Options and the bury, suspend, flag, mark and info buttons are off
+the page (the engine still has them); Undo stays. With no Options tab, the new-card limit follows the exam date by
+itself: enough a day to meet every card before the exam, never fewer than Anki's 20. The whole sim lost its loud skin
+at the same time: no colour-gradient header (a line in the paper's colour under it instead), no giant-name banner
+(a plain title), no drifting specks on featured rows, and a fainter page tint. `rep.html` is now **Write the short
+answers**, and its back link goes to the hub's Write side.
 
 **The split.** `rep.build.mjs` builds both pages from `content/rep.js`: a question whose question AND answer come from
 the lecturer (or the source she set) goes on the ladder (`rep.html`); everything else becomes a card, one per question.

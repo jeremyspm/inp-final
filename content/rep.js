@@ -264,7 +264,7 @@ const verbatim = [
 ];
 
 export const REP = {
-  name: 'Learn the short answers',
+  name: 'Write the short answers',
   sub: 'The lecturers’ own written questions, verbatim · read it, type it, it comes back',
   groupWord: 'topics',
   how: 'Only verbatim material is here: the lecturers’ own written questions from the Module 11 Te Tiriti video quiz, answered in the speaker’s own words from the Nursing Council’s videos (four so far; the other videos have not been found). Everything else — Janine’s revision slides, the lecturers’ quiz questions recalled without their options, the tool’s short answers — is in Flashcards.',
