@@ -240,11 +240,37 @@ const recall = {
 const writtenGroup = Object.fromEntries(['a-cna', 'a-tikanga', 'a-pain', 'a-fcc', 'a-nzhs', 'a-discharge', 'a-tus', 'a-roles', 'a-rf', 'a-ltc', 'a-inject',
   'w-care', 'w-clin', 'w-pop', 'w-prof'].map(q => [q, 'tool']));
 
+/* VERBATIM — the ladder (27 Oct 2026, his call: only verbatim material stays on the HS2-style ladder; the rest is cards).
+   The lecturers' own written questions from the Module 11 video quiz "Te Tiriti, Māori Health, Kawa Whakaruruhau,
+   Cultural Safety" (Canvas quiz 213107; Canvas publishes no answers), each answered in the speaker's own words from the
+   Nursing Council's video series, by timestamp. Only the questions on video 3 (Dean Cowles, "Moving beyond competence to
+   safety", vimeo.com/1180647014) are answered so far: videos 2, 4, 5 and 7 are unlisted and were not found. Q5
+   (wairuatanga) sits under video 2 in the quiz; it is answered from Dean's definition in video 3. Q1 asks for your own
+   view before watching, so it has no answer to learn. Question wording is the quiz's, typos and all. */
+const V3 = 'Nursing Council video 3, “Moving beyond competence to safety” (Dean Cowles, Ngāti Awa), vimeo.com/1180647014';
+const verbatim = [
+  { id: 'tt-wairua', group: 'tiriti', title: 'Wairuatanga', src: V3 + ' [04:53–05:31]', ask: 'What is \'wairuatanga\'',
+    facts: ['The **unwritten fourth element** of Te Tiriti — not in its text, but threaded throughout', 'It refers to **holistic health**',
+      'It brings in the **spiritual dimension** of hauora — health and wellbeing'] },
+  { id: 'tt-pou1', group: 'tiriti', title: 'The purpose of Pou 1', src: V3 + ' [01:16–01:40]', ask: 'According to Dean, what is the purpose of Pou 1: Maori Health',
+    facts: ['It ensures registered nurses are **advocating** for **equitable** care that is **culturally safe**',
+      'Nurses demonstrate Kawa Whakaruruhau by addressing **power imbalances** and working **collaboratively** with Māori'] },
+  { id: 'tt-epitome', group: 'tiriti', title: 'The epitome of kawa whakaruruhau', src: V3 + ' [01:40–02:02]', ask: 'What does the speaker say is "the epitomy of kawa whakaruruhau"?',
+    facts: ['The nursing profession is called to **actively resist** and **dismantle** any potential **racist systems**', '…rather than remaining **passive** or **complicit**'] },
+  { id: 'tt-articles', group: 'tiriti', title: 'Upholding the articles', src: V3 + ' [02:52–04:53]', ask: 'What examples are given of how we can uphold kawanatanga, tino rangatiratanga, oritetanga',
+    facts: ['Kāwanatanga: use **Māori leadership** and **consultation** — the **hauora Māori** support service, **kaiāwhina**, **kaumātua**',
+      'Tino rangatiratanga: **health literacy** — education that is easily understood', '…**wellness tools** developed in **partnership**, so they can manage their own health',
+      '…incorporating **tikanga** and **te ao Māori**', 'Ōritetanga: **equity** — address and respond to the **determinants of health**'] },
+];
+
 export const REP = {
   name: 'Learn the short answers',
-  sub: 'Janine’s revision slides and the lecturers’ own quiz answers · read it, type it, it comes back',
+  sub: 'The lecturers’ own written questions, verbatim · read it, type it, it comes back',
   groupWord: 'topics',
-  how: 'Lisa sets no practice short answers, so this page learns the written section from the lecturers’ own material. First, <b>Janine’s revision deck</b>, slide by slide, in her words: the question above each is the tool’s framing, every line under it is her slide. Then <b>the lecturers’ own quiz questions</b>, asked without their options, so you produce her key yourself. Last, in their own group and tagged, the tool’s 23 short answers.',
-  foot: 'Student-made revision from the INP lecturers’ revision deck and Canvas quizzes. Not MIT material. Progress stays in this browser.',
-  groups, pieces, recall, writtenGroup,
+  how: 'Only verbatim material is here: the lecturers’ own written questions from the Module 11 Te Tiriti video quiz, answered in the speaker’s own words from the Nursing Council’s videos (four so far; the other videos have not been found). Everything else — Janine’s revision slides, the lecturers’ quiz questions recalled without their options, the tool’s short answers — is in Flashcards.',
+  foot: 'Student-made revision from the INP lecturers’ quizzes and revision deck, and the Nursing Council’s video series. Not MIT material. Progress stays in this browser.',
+  groups: [{ id: 'tiriti', title: 'Te Tiriti & Kawa Whakaruruhau (video quiz)', hue: 18 }, ...groups], verbatim, pieces, recall, writtenGroup,
+  cardsName: 'Flashcards',
+  cardsSub: 'Janine’s revision slides, the lecturers’ quiz answers and the tool’s short answers · Anki, stripped down',
+  cardsHow: 'Lisa sets no practice short answers, so these come from the lecturers’ own material: <b>Janine’s revision deck</b> slide by slide (the question is the tool’s framing, every line of the answer is her slide), then <b>the lecturers’ own quiz questions</b> asked without their options, one card each, so you produce her key yourself. Last, in their own deck and tagged, the tool’s 23 short answers.',
 };

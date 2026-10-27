@@ -89,8 +89,10 @@ export const META = {
   /* the guided-recall page for the written section (rep.html, built by rep.build.mjs from content/rep.js, 27 Oct 2026):
      Janine's revision slides and the lecturers' quiz answers as key words, a featured card on home */
   more: [{ sec: 'Learn', href: 'rep.html', ic: '🧠', t: 'Learn the short answers',
-    s: 'Janine’s revision slides and the lecturers’ own quiz answers, as key words that come back over the days',
-    hl: { c: '#16a34a', c2: '#4ade80', kick: '✨ New · the written section', go: 'Start ›' } }],
+    s: 'The lecturers’ own written questions (the Te Tiriti video quiz), as key words that come back over the days' },
+    { sec: 'Learn', href: 'cards.html', ic: '🗂', t: 'Flashcards',
+    s: 'Anki, stripped down: Janine’s revision slides, the lecturers’ quiz answers and the tool’s short answers',
+    hl: { c: '#16a34a', c2: '#4ade80', kick: '✨ New · spaced repetition', go: 'Study ›' } }],
   paper: 'Introduction to Nursing Practice',
   bankOf: 'the INP lecturers’',          // "dealt from … whole question bank"
   who: 'the INP lecturers',              // "Model answers are the tool’s, not …’s"

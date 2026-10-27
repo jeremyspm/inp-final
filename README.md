@@ -90,27 +90,37 @@ the mock keeps the old slot's **160 min**.
 - Ten Knowledge Check questions about being a student here (attendance, extensions, online-exam
   rules, netiquette) stay under Pick my rep but are **never dealt into a mock** (`NO_MOCK`).
 
-## Learn the short answers (`rep.html`, 27 Oct 2026)
+## Learn the short answers (`rep.html`) and Flashcards (`cards.html`)
 
-Lisa sets no practice short answers, so the written section is learned from the lecturers' own material, in this
-order (`content/rep.js`):
+Lisa sets no practice short answers.
 
-1. **Janine's revision deck** (Revision Semester 2 2026, 111 slides, on Canvas), slide by slide in her words: 53
-   pieces across the topics she revised, each with its key words in bold. The question above a piece is the tool's
-   framing; every line under it is her slide, and each names its slide number. Wound assessment (T.I.M.E., slide 17)
-   is in; upstream/midstream/downstream is not, because its Primary Health Care slides are pictures with no text.
-2. **The lecturers' own quiz questions as recall**: 98 of them, asked without their options, so you produce her key
-   yourself, several to a card per lecture (31 cards). Only questions whose key stands on its own: no "All of these",
-   no "which is NOT", no "an example of" with many right answers. The build fails if a key word is not in her key.
-3. **The tool's 23 short answers**, last, in their own group, tagged.
+**The ladder holds the verbatim material only**: the lecturers' own written questions from the Module 11 video quiz
+"Te Tiriti, Māori Health, Kawa Whakaruruhau, Cultural Safety" (Canvas quiz 213107, which publishes no answers),
+answered in the speaker's own words from the Nursing Council's video series, by timestamp (`verbatim` in
+`content/rep.js`). So far 4 of its 14: Q5–Q8, from video 3 (Dean Cowles, "Moving beyond competence to safety",
+vimeo.com/1180647014). Videos 2, 4, 5 and 7 are unlisted on Vimeo and were not found; Q1 asks for your own view.
 
-107 pieces, 487 key-word lines. It is HS2 Final's guided-recall page ("Learn the cases"), ported into the shared pipeline: `rep-engine.mjs` is
-that page's engine, unchanged (typed key words, marked by the page; a day counts after 2 from-memory hits in a row;
-solid after 3 days running); `rep.js`, `rep.template.html`, `rep.css` and `rep.build.mjs` are its page made
-general, driven by `content/rep.js`. All five are shared files (`shared-check.mjs`). `build.mjs` and
-`resplice.mjs` regenerate `rep.html` (or `node rep.build.mjs` alone); **do not edit the generated `rep.html`**.
-Progress lives under `<prefix>relearn.v1`, apart from the Paper Sim scores, with export and import. The home screen
-has it as a featured card, and the hub's exam opens on it (its Learn side).
+**Flashcards hold the rest, 173 cards in 13 decks**: Janine's revision deck (Revision Semester 2 2026) slide by slide in
+her words, 53 cards (the question is the tool's framing, every answer line is her slide; upstream/midstream/downstream
+is not in, its slides are pictures); 97 of the lecturers' own quiz questions asked without their options, one card
+each, her key the answer (only keys that stand on their own — no "All of these", no "which is NOT"); and the tool's
+23 short answers, last, in their own deck.
+
+**Flashcards (`cards.html`, 27 Oct 2026)** — his call the same evening: "we only leave the verbatim things the way
+HS2 is approached and the rest of it becomes straight up SRS cards, copy anki basically". A stripped-down Anki:
+decks with New · Learn · Due counts, a deck overview, the study screen (Show answer, then Again · Hard · Good · Easy,
+each showing its next interval; keys Space and 1–4), undo, bury, suspend, flag, mark, leeches (8 lapses suspends and
+tags), a card browser with search and filters, stats (today, card counts, a 30-day forecast, reviews a day, young and
+mature retention) and the options Anki has (new and review limits, learning and relearning steps, graduating and easy
+intervals, starting ease, easy bonus, hard interval, interval modifier, maximum interval, leech threshold, new-card
+order, the 4 am rollover), with export, import and reset. The scheduler is `srs-engine.mjs` — Anki's SM-2 with its v3
+defaults, not FSRS — and `node cards.check.mjs` checks it against Anki's rules. The Decks screen says when the
+new-card limit will not reach every card before the exam. Progress lives under `<prefix>srs.v1`.
+
+**The split.** `rep.build.mjs` builds both pages from `content/rep.js`: a question whose question AND answer come from
+the lecturer (or the source she set) goes on the ladder (`rep.html`); everything else becomes a card, one per question.
+`cards.template.html`, `cards.js`, `cards.css`, `srs-engine.mjs` and `cards.check.mjs` are shared files
+(`shared-check.mjs`). Do not edit the generated `rep.html` or `cards.html`.
 
 ## How it is built
 
