@@ -39,6 +39,22 @@ the mock keeps the old slot's **160 min**.
   build checks that each one lands in exactly one row. This gives pain, family-centred care, the
   Health Strategy, therapeutic use of self, nurses' roles and student scope of practice their first
   lecturer questions. Bank now 356.
+- **27 Oct 2026: the tool's 165 questions cut to 63.** Too much of the bank was the tool's. What is left is
+  where the lecturers' quizzes say little:
+  - **40 multi-choice**, rewritten in the lecturers' shape (their stems average 14 words and their options
+    5; the tool's ran 18 and 9). Five each for the lectures their quizzes never ask (Community Needs
+    Assessment, Tikanga, Discharge Planning, Rheumatic Fever, Injections), three each where the 27 Oct
+    Practice Quizzes now ask one or two (Pain, Family-centred Care, the Health Strategy, Therapeutic Use
+    of Self, Roles of Nurses), none for Long-term Conditions (the lecturers' own 10 cover it). Explanation
+    and source lines are unchanged.
+  - **23 short answers**, unchanged: one per lecture row above (plus one for Long-term Conditions) and
+    three per written-section group, on the core exam themes (nursing process, data, documentation, normal
+    ranges, precautions, hypoglycaemia, the determinants of health, Te Tiriti principles, prevention,
+    consent, evidence-based practice). Lisa sets no practice short answers, and the real paper has 15, so
+    the mock still needs these; each keeps its short version.
+  - **Every deal serves the lecturers' questions first**: among equally-seen questions, a tool's question
+    ranks after theirs (`pickN` in the shared template), in Learn, topic drills and both mocks. Bank now
+    254: 191 theirs, 63 the tool's.
 - **Still not in:** Rheumatic Fever (210112, one attempt only, not sat); the Module 11 Te Tiriti /
   Kawa Whakaruruhau video quiz (213107 captured, but its 14 written questions have no answers, so the
   build holds them all); and its second copy 213478, which has the same title and count and was not captured.
@@ -73,6 +89,28 @@ the mock keeps the old slot's **160 min**.
 - Slide references under a question, and videos. Not built for this paper.
 - Ten Knowledge Check questions about being a student here (attendance, extensions, online-exam
   rules, netiquette) stay under Pick my rep but are **never dealt into a mock** (`NO_MOCK`).
+
+## Learn the short answers (`rep.html`, 27 Oct 2026)
+
+Lisa sets no practice short answers, so the written section is learned from the lecturers' own material, in this
+order (`content/rep.js`):
+
+1. **Janine's revision deck** (Revision Semester 2 2026, 111 slides, on Canvas), slide by slide in her words: 53
+   pieces across the topics she revised, each with its key words in bold. The question above a piece is the tool's
+   framing; every line under it is her slide, and each names its slide number. Wound assessment (T.I.M.E., slide 17)
+   is in; upstream/midstream/downstream is not, because its Primary Health Care slides are pictures with no text.
+2. **The lecturers' own quiz questions as recall**: 98 of them, asked without their options, so you produce her key
+   yourself, several to a card per lecture (31 cards). Only questions whose key stands on its own: no "All of these",
+   no "which is NOT", no "an example of" with many right answers. The build fails if a key word is not in her key.
+3. **The tool's 23 short answers**, last, in their own group, tagged.
+
+107 pieces, 487 key-word lines. It is HS2 Final's guided-recall page ("Learn the cases"), ported into the shared pipeline: `rep-engine.mjs` is
+that page's engine, unchanged (typed key words, marked by the page; a day counts after 2 from-memory hits in a row;
+solid after 3 days running); `rep.js`, `rep.template.html`, `rep.css` and `rep.build.mjs` are its page made
+general, driven by `content/rep.js`. All five are shared files (`shared-check.mjs`). `build.mjs` and
+`resplice.mjs` regenerate `rep.html` (or `node rep.build.mjs` alone); **do not edit the generated `rep.html`**.
+Progress lives under `<prefix>relearn.v1`, apart from the Paper Sim scores, with export and import. The home screen
+has it as a featured card, and the hub's exam opens on it (its Learn side).
 
 ## How it is built
 
