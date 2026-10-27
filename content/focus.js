@@ -29,14 +29,17 @@
  * noquiz · untaught.
  *
  * `done` = what you must be able to DO to tick it · `ask` = the shape the lecturers' own quiz
- * uses (read from all 153 captured questions) · `cap` = where it stops, with the evidence. */
+ * uses (read from all 191 captured questions) · `cap` = where it stops, with the evidence. */
 const W = (quiz, deck) => ({ quiz: [quiz], src: new RegExp('· from ' + deck.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')) });
+/* Practice Quizzes 1–3 (captured 27 Oct) mix topics: each row claims its questions by stem.
+   sim.config.mjs ROUTE deals the same questions under the same groups. */
+const PQ = re => ({ quiz: ['210120', '210127', '210117'], q: re });
 
 export const FOCUS = [
 
 /* ══════════ TIER 1 — a learning outcome names it, and it keeps coming back ══════════ */
 { id:'nursing-process', sys:'care', tier:1, t:'The nursing process (ADPIE)', flag:'LO1 X EC',
-  from:[{ quiz:['210104'] }, W('w-care','The Nursing Process 2026 deck')],
+  from:[{ quiz:['210104'] }, W('w-care','The Nursing Process 2026 deck'), PQ(/subjective data|RN would like to/i)],
   done:'Name the five steps in order and say what happens in each; tell subjective from objective data; recognise a nursing diagnosis (not a medical one) and write one in three parts — problem, related to, as evidenced by; say what makes a goal well written; say what evaluation decides (met / partially met / not met).',
   ask:'Ten single-best-answer questions at definition level: “which is the first step”, “which is an example of subjective data”, “which is a nursing diagnosis” (Risk for infection), “which is a measurable outcome” (walk 50 metres with assistance within 48 hours). No scenario longer than a line.',
   cap:'The quiz never asks you to WRITE a diagnosis or a goal — it asks you to recognise a good one. Writing them is the short-answer risk, and the Case Study assessment already made you do it. LO1 is literally “apply the nursing process”, and ADPIE returns in Care Plans, Holistic Assessment and Discharge Planning.',
@@ -44,7 +47,7 @@ export const FOCUS = [
   crit:'“Nursing process: Nursing care planning”' },
 
 { id:'care-plans', sys:'care', tier:1, t:'Nursing care plans — diagnosis, SMART goal, interventions, rationale, evaluation', flag:'LO1 X EC',
-  from:[{ quiz:['210126'] }, W('w-care','Nursing Care Plans 2026 deck')],
+  from:[{ quiz:['210126'] }, W('w-care','Nursing Care Plans 2026 deck'), PQ(/has a nursing care plan/i)],
   done:'Say what a care plan is for; pick the correctly prioritised NANDA-I diagnosis for a patient (life-threatening → safety → patient-identified → nurse-identified); spell out SMART; tell a short-term from a long-term goal; tell a nurse-initiated (independent) from a collaborative intervention; say what goes in the evaluation column and the three verdicts.',
   ask:'One-line patients: fractured ribs → Acute pain; immobile → Risk for Impaired Skin Integrity; “which outcome shows the plan is working” (pain 2/10) or “needs revision” (frequent hypoglycaemia). Plus one piece of trivia — what NANDA stood for before 2002.',
   cap:'You are not asked to produce a full five-column plan in a multi-choice. Rationale with citations was for the assignment, not the exam. Know the columns and what belongs in each.',
@@ -84,7 +87,7 @@ export const FOCUS = [
   crit:'“Evidence-based practice”' },
 
 { id:'documentation', sys:'care', tier:1, t:'Clinical documentation, ISBAR and SOAP', flag:'LO4 X EC',
-  from:[{ quiz:['210115'] }, W('w-care','Clinical Documentation 2026 deck')],
+  from:[{ quiz:['210115'] }, W('w-care','Clinical Documentation 2026 deck'), PQ(/main purpose of documentation/i)],
   done:'Give the three reasons nurses document (legal, professional, communication); state the rules — black or blue pen, 24-hour time, sign with designation, no gaps, correct an error with ONE line plus “error” and initials, retrospective entries marked as such; say who owns the notes (the organisation); place a statement under the right ISBAR letter; say what each SOAP/SOAPIER letter stands for; give AI²DET.',
   ask:'Rule-recall: “what colour pen”, “why no gaps”, “who owns the notes”, “what do you do if you make a mistake”, “what is the P in SOAP”, and one applied item — which statement is the A in ISBAR (“temperature 39.3 and she is confused”). One on terminology: write cyanosis, not “blue lips”.',
   cap:'Abbreviation lists are in the deck; the quiz asks none. The legislation slide (HPCAA, HDC Act, Privacy Act) is not tested here — it is tested in the Knowledge Check and Informed Consent. ISBAR returns in Roles of Nurses with the same letters.',
@@ -101,7 +104,7 @@ export const FOCUS = [
 
 /* ══════════ TIER 2 — examinable, one lecture's worth ══════════ */
 { id:'vitals', sys:'clin', tier:2, t:'Vital signs, the primary survey and the Early Warning Score', flag:'LO3 EC',
-  from:[{ quiz:['210111'] }, W('w-clin','Vital Signs 2026 deck')],
+  from:[{ quiz:['210111'] }, W('w-clin','Vital Signs 2026 deck'), PQ(/short of breath|Tachycardia|Vital signs are taken|sphygmomanometer|absence of breathing|medical term for fever|conscious control|pyrexic|heart rate is 48/i)],
   done:'Run A–E and say what is assessed under each; give the normal adult ranges (SpO₂ 95–100%, BP 110–140 / 60–90, temperature 36.5–37.5 °C) and the named alterations — tachy/bradypnoea, tachy/bradycardia, hypo/hypertension, pyrexia >38, hypothermia <35; AVPU; signs of respiratory distress; the first Korotkoff sound; when to count for a full minute; what the EWS is for and what triggers escalation.',
   ask:'Terminology and ranges: “RR of 32 is called…”, “temperature below 35 is…”, “normal SpO₂”, “what does A in AVPU stand for”, “first Korotkoff sound represents…”, “irregular pulse — what do you do”. Three keys are “All of these”.',
   cap:'You already passed the practical. The exam side is words and numbers, not technique. The exact EWS scoring bands are not asked — only its purpose.',
@@ -109,7 +112,7 @@ export const FOCUS = [
   crit:'“Vital signs, injections, blood glucose monitoring”, and the “Emergency assessment” of the assessment line (the primary survey, A–E). Injections have their own row (from the CLS page “Inpatient Prep – Injections”, since no lecture teaches them). Blood glucose numbers sit under Diabetes; the procedure is on the CLS page “Inpatient Prep – Blood Glucose Assessment”.' },
 
 { id:'ipc', sys:'clin', tier:2, t:'Infection prevention and control', flag:'LO3 EC',
-  from:[{ quiz:['210118'] }, W('w-clin','Infection Prevention & Control 2026 deck')],
+  from:[{ quiz:['210118'] }, W('w-clin','Infection Prevention & Control 2026 deck'), PQ(/infection control|standard precautions/i)],
   done:'Define an HAI (appears 48 hours or more after admission) and name the common four; give the six links of the chain of infection in order; define standard precautions and list them; match a condition to contact, droplet or airborne precautions and the PPE each needs; give the donning order; say why hand hygiene comes first.',
   ask:'Match-the-precaution vignettes — diarrhoea → contact; a child with vesicles, suspected chickenpox → airborne; “what PPE for droplet” — plus “most effective method” (hand hygiene), the donning order, and two “All of these”.',
   cap:'Spaulding’s classification, sterilisation methods and the named organisms are in the deck and absent from the quiz. Doffing order is on a slide; only DONNING is asked.',
@@ -117,7 +120,7 @@ export const FOCUS = [
   crit:'“Infection prevention and control”' },
 
 { id:'diabetes', sys:'clin', tier:2, t:'Diabetes mellitus — type 1 vs type 2, hypo- and hyperglycaemia, DKA', flag:'LO3 EC',
-  from:[{ quiz:['210102'] }, W('w-clin','Diabetes Mellitus deck')],
+  from:[{ quiz:['210102'] }, W('w-clin','Diabetes Mellitus deck'), PQ(/blood sugar/i)],
   done:'Say what insulin does and where it is made; contrast type 1 (auto-immune, no insulin, usually young) with type 2 (resistance, lifestyle and genetics, 90–95%); give the normal blood glucose (4–7.5 mmol/L), the hypo line (<4) and its causes and symptoms; recognise DKA from a vignette — high glucose, ketones, vomiting, abdominal pain; list risk factors and long-term complications.',
   ask:'Eight plain recall questions: a common symptom (frequent urination), the hormone, which type in children, the normal fasting range, the cause of type 1 — and one vignette (glucose 30, ketones, vomiting → DKA). Two keys are “All of these”.',
   cap:'Treatment of hyperglycaemia step by step, HbA1c detail and the annual-check list are slides the quiz ignores. This is the only disease-specific lecture with a quiz — Long-term Conditions (9 Oct) may widen it.',
@@ -140,10 +143,10 @@ export const FOCUS = [
   src:'Informed consent 2026 deck · Informed Consent quiz',
   crit:'“Informed consent”' },
 
-{ id:'pain', sys:'care', tier:2, t:'Pain assessment — OLDCARTS, types of pain, pain scales', flag:'LO3 noquiz EC',
-  from:[{ quiz:['a-pain'] }],
+{ id:'pain', sys:'care', tier:2, t:'Pain assessment — OLDCARTS, types of pain, pain scales', flag:'LO3 EC',
+  from:[{ quiz:['a-pain'] }, PQ(/complaining of pain, the first action|carry out a pain assessment/i)],
   done:'Give McCaffery’s definition and what it means for assessment; separate nociceptive (somatic, visceral) from neuropathic pain by cause and by the words a patient uses; separate acute from chronic; list behavioural and physiological responses; run OLDCARTS letter by letter; choose a scale for the patient in front of you (numeric, Wong-Baker FACES, FLACC); say when pain is assessed.',
-  ask:'Nobody knows — the lecturers have set no question on this lecture. The tool’s questions copy the shape of the quizzed lectures: definitions, “which type of pain is this” from a one-line description, and which letter of OLDCARTS a statement belongs under.',
+  ask:'The lecturers’ Practice Quizzes (captured 27 Oct) ask two one-liners: the first thing to do for a patient complaining of pain (assess it with a pain scale), and when to assess pain (every time you check on your patient). The tool’s questions copy the shape of the quizzed lectures: definitions, “which type of pain is this” from a one-line description, and which letter of OLDCARTS a statement belongs under.',
   cap:'The second half of the deck — analgesic ladder, NSAIDs, opioids, routes — is pharmacology and belongs to the Pharm paper; the tool wrote nothing from it. The practice handout’s scenarios are the best rehearsal for a short answer.',
   src:'Pain Assessment BN2 deck + the Pain Assessment Practice Handout',
   crit:'“pain assessment”, inside the line “Emergency assessment, Holistic assessment, pain assessment, wound assessment, fall risk assessment”' },
@@ -156,10 +159,10 @@ export const FOCUS = [
   src:'Discharge Planning Lecture deck',
   crit:'“Discharge planning”' },
 
-{ id:'fcc', sys:'care', tier:2, t:'Family-centred care and Whānau Ora', flag:'LO1 noquiz EC',
-  from:[{ quiz:['a-fcc'] }],
+{ id:'fcc', sys:'care', tier:2, t:'Family-centred care and Whānau Ora', flag:'LO1 EC',
+  from:[{ quiz:['a-fcc'] }, PQ(/Family centred care|Nursing practice now-a-days/i)],
   done:'Give the Stats NZ definition of family beside the nursing one (whoever the person says); name the four shared functions of families; give the three elements of facilitating family-centred care with an action each; say what a genogram and ecomap are for; state what may be shared with family under the Health Information Privacy Code; define family violence; describe Whānau Ora — who, when, how it is funded, what it does.',
-  ask:'Nobody knows — no lecturer question exists. The deck ends on a Menti “recap and quiz” that was run live and not posted.',
+  ask:'The lecturers’ Practice Quizzes (captured 27 Oct) ask two one-liners: a principle of family-centred care (partnership), and what nursing practice now focuses on (the client). The deck ends on a Menti “recap and quiz” that was run live and not posted.',
   cap:'The history-of-the-family slides are scene-setting. Health Strategy Priority 1 appears here too — it is counted under the Health Strategy row.',
   src:'Family Centred Care deck',
   crit:'“Family centered care”' },
@@ -175,23 +178,23 @@ export const FOCUS = [
 { id:'tikanga', sys:'prof', tier:2, t:'Tikanga best practice and Kawa Whakaruruhau (cultural safety)', flag:'LO1 LO4 noquiz X EC',
   from:[{ quiz:['a-tikanga'] }],
   done:'Define cultural safety and say who decides whether care was safe (the recipient); say why awareness, sensitivity and competence are not enough; define kawa, tikanga, tapu and noa; name the parts of the body that are tapu; give the principles of tikanga best practice with an action each — whakawhanaungatanga, manaakitanga, whānau-centred care, respect for tikanga and taonga, shared decision-making.',
-  ask:'Nobody knows — no lecturer question exists. Several of the deck’s slides are pictures with no text, so the tool’s questions come only from the slides that carry words.',
+  ask:'The lecturers’ only quiz here is the Module 11 video quiz (Te Tiriti, Māori Health, Kawa Whakaruruhau, Cultural Safety): 14 written questions about six short videos, such as what kawa, whakaruruhau and wairuatanga mean. It has no answers, so none of it is in this bank. Several of the deck’s slides are pictures with no text, so the tool’s questions come only from the slides that carry words.',
   cap:'A short deck (23 slides). Cultural safety is also a Nursing Council pou and turns up in the Pharm paper’s legal lecture — same definition.',
   src:'Tikanga Best Practice and Kawa Whakaruruhau deck',
   crit:'“Therapeutic use of self, cultural awareness and sensitivity” — the cultural half of that line. No lecture is called cultural awareness; this deck is where awareness and sensitivity are set against cultural safety.' },
 
-{ id:'nzhs', sys:'pop', tier:2, t:'New Zealand Health Strategy 2023 and Pae Ora', flag:'LO2 noquiz X EC',
-  from:[{ quiz:['a-nzhs'] }],
+{ id:'nzhs', sys:'pop', tier:2, t:'New Zealand Health Strategy 2023 and Pae Ora', flag:'LO2 X EC',
+  from:[{ quiz:['a-nzhs'] }, PQ(/Health Strategy/i)],
   done:'Say what the Pae Ora (Healthy Futures) Act 2022 changed; give the strategy’s two long-term goals; list the six priority areas and recognise any one from its description; separate equity from equality; name the partner strategies (Pae Tū, Te Mana Ola…); give the three priorities of the Government Policy Statement 2024–27 — access, timeliness, quality; say what equity in action looks like for a nurse.',
-  ask:'Nobody knows — no lecturer question exists. The deck’s own learning outcomes are a list of things to “identify and describe” — 2 goals, 6 priorities — which is exactly how a short answer would be worded.',
+  ask:'The lecturers’ Practice Quizzes (captured 27 Oct) ask two: which Act the 2023 strategy is published under (Pae Ora (Healthy Futures) Act 2022), and one of its main goals (health equity). The deck’s own learning outcomes are a list of things to “identify and describe” — 2 goals, 6 priorities — which is exactly how a short answer would be worded.',
   cap:'The politics of the Māori Health Authority’s disestablishment is context. The associated-strategies slides are a list nobody could be asked to reproduce.',
   src:'New Zealand Health Strategy 2023 deck',
   crit:'“2023 Health Strategy”' },
 
-{ id:'tus', sys:'prof', tier:2, t:'Therapeutic use of self — communication and emotional intelligence', flag:'LO4 noquiz EC',
-  from:[{ quiz:['a-tus'] }],
+{ id:'tus', sys:'prof', tier:2, t:'Therapeutic use of self — communication and emotional intelligence', flag:'LO4 EC',
+  from:[{ quiz:['a-tus'] }, PQ(/therapeutic use of self/i)],
   done:'Say what professional agency is for; name Watson’s theory and its idea of a caring moment; separate responsive from assertive communication with an example; list verbal and non-verbal elements and barriers; name the five components of emotional intelligence; separate surface acting from deep acting and place both under self-regulation.',
-  ask:'Nobody knows — no lecturer question exists. The deck’s role-plays (the frightened patient, the refused medication, the angry patient at the end of a shift) are scenario stems waiting to be used.',
+  ask:'The lecturers’ Practice Quizzes (captured 27 Oct) ask one: the two principles that underpin therapeutic use of self (competent communication and emotional intelligence). The deck’s role-plays (the frightened patient, the refused medication, the angry patient at the end of a shift) are scenario stems waiting to be used.',
   cap:'Watson’s ten carative factors are a picture on one slide — not reproducible, so not written into a question.',
   src:'Therapeutic Use of Self BN2 deck',
   crit:'“Therapeutic use of self, cultural awareness and sensitivity” — the cultural half is covered under Tikanga and Kawa Whakaruruhau.' },
@@ -199,15 +202,15 @@ export const FOCUS = [
 { id:'rheumatic-fever', sys:'clin', tier:2, t:'Rheumatic fever and rheumatic heart disease', flag:'LO2 noquiz EC',
   from:[{ quiz:['a-rf'] }],
   done:'Define rheumatic fever as an auto-immune response — not an infection, not contagious — to a Group A Strep throat or skin infection that was not treated properly, 1–5 weeks later; say who it mainly affects (Māori and Pacific children aged 4–19) and why (crowding, inequity); list the symptoms — joint pain that moves joint to joint, fever, tiredness, chorea, rash, breathlessness, a new murmur; say how it is diagnosed (no single test: history, throat swab, Strep antibodies, ECG, echo); teach the ongoing care — penicillin every 28 days for at least 10 years or to age 21, never late, extra antibiotic cover and the wallet card before dental visits, every sore throat checked; say what rheumatic heart disease is (scarred mitral and/or aortic valves).',
-  ask:'Nobody knows — no lecturer question exists. The tool’s questions copy the quizzed lectures’ shape: definitions, “who does it affect”, the 28-day rule, and short scenarios (a child with jerky movements, a family going on holiday).',
+  ask:'The lecturers do have a Rheumatic Fever quiz (10 questions), but it allows one attempt only and has not been sat, so none of its questions are here. The tool’s questions copy the quizzed lectures’ shape: definitions, “who does it affect”, the 28-day rule, and short scenarios (a child with jerky movements, a family going on holiday).',
   cap:'The two decks disagree on the acute antibiotic (Janine: penicillin; the guest speaker: oral amoxicillin, and “there is no treatment for ARF”), so the tool asks nothing that turns on it. The guest speaker’s hospital detail (CRP, ESR, warfarin and INR checks) goes no further than a list. Her equity slides tie this row to Social Determinants.',
   src:'Rheumatic Fever deck (Janine Craig) + Rheumatic Fever – Guest speaker deck (Jessica Murray, CNS KidzFirst), Canvas Module 8',
   crit:'“Diabetes, Rheumatic fever”' },
 
-{ id:'ltc', sys:'clin', tier:2, t:'Long-term conditions and self-management', flag:'noquiz EC',
-  from:[{ quiz:['a-ltc'] }],
+{ id:'ltc', sys:'clin', tier:2, t:'Long-term conditions and self-management', flag:'EC',
+  from:[{ quiz:['210101'] }, { quiz:['a-ltc'] }, PQ(/long term conditions/i)],
   done:'Define a long-term condition (over 6 months, ongoing or recurring, a significant impact; also called NCDs), self-management (any way a person manages their own condition — ongoing, not one-off) and self-management support; list what a good self-manager does; say why interdependence matters to Māori, Pacific and South Asian peoples; name Wagner’s six components and define patient activation; say what Journey to Wellbeing — Huarahi Ora changed (whānau inclusive, culturally safe, community-designed); give the nurse’s role and the four essential components of programmes; work the asthma and coeliac examples.',
-  ask:'Nobody knows — no lecturer question exists. The deck’s own learning outcomes are “define”, “describe”, “identify” — short-answer verbs — and its last third is three “what would this person need to know and have access to?” cases: asthma, coeliac disease, CRPS.',
+  ask:'The lecturers’ Long-Term Health Conditions quiz (captured 27 Oct; it sits in no Canvas module) is ten definition-level single-best-answers: which condition is long-term (hypertension), the treatment goal for long-term pain, what self-management support must do, interdependence, multi-morbidity, smoking cessation for COPD and the nurse’s role (empowering). Practice Quiz 1 adds one more: the older name for long-term conditions (chronic conditions). The deck’s own learning outcomes are “define”, “describe”, “identify” — short-answer verbs — and its last third is three “what would this person need to know and have access to?” cases: asthma, coeliac disease, CRPS.',
   cap:'Huarahi Ora’s 7 principles are on picture-only slides, and the CRPS case was a group exercise with no text — neither is asked. Te Kete Haerenga is a patient workbook; two questions come from it (its SMART ends in Trackable, not the care-plan template’s timely; its wheel is Te Whare Tapa Whā). Sits straight on top of Diabetes and Health Literacy.',
   src:'Self-management support for people with long-term conditions 2026 deck + Te Kete Haerenga workbook (Canvas, Module 9)',
   crit:'“Long term conditions & self-management”' },
@@ -228,11 +231,12 @@ export const FOCUS = [
   crit:'“Theory of Health Promotion, upstream/midstream/downstream factors” · “Principles of Primary Health Care” — nothing in this bank asks either yet.' },
 
 { id:'screening', sys:'prof', tier:2, t:'Health screening and the Standards of Competence', flag:'untaught EC',
+  from:[PQ(/telephone|preceptor is busy/i)],
   done:'Not taught yet — Tue 20 Oct.',
   ask:'Unknown until the lecture and any quiz are posted.',
   cap:'Secondary prevention = screening (already in Demography & Epidemiology). The Nursing Council Standards of Competence (2025, six pou) are on Canvas now as a PDF.',
   src:'Canvas timetable',
-  crit:'“Health screening” · “Standards of Competence & BN2 Student Nurse scope of practice” — no question here asks scope of practice.' },
+  crit:'“Health screening” · “Standards of Competence & BN2 Student Nurse scope of practice” — two Practice Quiz questions ask scope of practice: a doctor’s telephone order, and a preceptor asking you to give an overdue paracetamol. Both answers are “decline, it is not in a student nurse’s scope”.' },
 
 { id:'self-care', sys:'prof', tier:2, t:'Self-care, burnout and resilience', flag:'EC',
   from:[{ quiz:['210105'] }, W('w-prof','Self-care in nursing deck')],
@@ -242,10 +246,10 @@ export const FOCUS = [
   src:'Self-care in nursing deck · Self-care quiz',
   crit:'“Self-care in nursing”' },
 
-{ id:'roles', sys:'prof', tier:2, t:'Roles of nurses — aged care, primary, acute, mental health, informatics', flag:'noquiz X EC',
-  from:[{ quiz:['a-roles'] }],
+{ id:'roles', sys:'prof', tier:2, t:'Roles of nurses — aged care, primary, acute, mental health, informatics', flag:'X EC',
+  from:[{ quiz:['a-roles'] }, PQ(/end-stage lung disease|telemedicine/i)],
   done:'Define multi-morbidity, primary healthcare and acute care; name the three residential levels of aged care; say what recovery means in mental health and what interpersonal theory puts at the centre; run ISBAR; give an example of nursing informatics.',
-  ask:'Nobody knows — no lecturer question exists. The deck is mostly videos and “a day in the life” timetables.',
+  ask:'The lecturers’ Practice Quizzes (captured 27 Oct) ask two: the nurse as advocate when a client and family disagree about treatment, and who telemedicine helps most (people far from care). The deck is mostly videos and “a day in the life” timetables.',
   cap:'A survey lecture: a definition from each of five settings is as deep as it can go. ISBAR is the part that scores elsewhere (Clinical Documentation). The exam themes list names this lecture three times — roles, nursing informatics, continuum of care — which is why it is not in the bottom band.',
   src:'Roles of Nurses deck',
   crit:'“Roles of nurses” · “Nursing informatics” · “Continuum of care” — informatics and continuum of care are taught nowhere else, and one question here asks each (both the tool’s). “Continuum of care” is on no slide in those words; the nearest is the community-health slide: services cover “the entire health and social care continuum”.' },

@@ -1,6 +1,553 @@
 {
  "quizzes": [
   {
+   "file": "INPCAP-210101.html",
+   "title": "Long-Term Health Conditions Quiz",
+   "sha256": "30f28d1d3a0bdfb6dc2756bae1872c5649c6bfa60410e419f48dae01d30143a7",
+   "questions": [
+    {
+     "n": "Question 1",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "Which of the following is considered a long-term health condition?",
+     "options": [
+      "Campylobacter",
+      "Rhinovirus",
+      "Hypertension",
+      "Acute bronchitis"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Campylobacter",
+       "blank": "Campylobacter",
+       "correctClass": false,
+       "titleAttr": "Campylobacter."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Rhinovirus",
+       "blank": "Rhinovirus",
+       "correctClass": false,
+       "titleAttr": "Rhinovirus."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Hypertension",
+       "blank": "Hypertension",
+       "correctClass": true,
+       "titleAttr": "Hypertension. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Acute bronchitis",
+       "blank": "Acute bronchitis",
+       "correctClass": false,
+       "titleAttr": "Acute bronchitis."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Hypertension"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 2",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "What is an example of a good self-manager?",
+     "options": [
+      "Follows an agreed treatment plan",
+      "All of these",
+      "Adopts lifestyles that promote health",
+      "Monitors and manages signs and symptoms"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Follows an agreed treatment plan",
+       "blank": "Follows an agreed treatment plan",
+       "correctClass": false,
+       "titleAttr": "Follows an agreed treatment plan."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "All of these",
+       "blank": "All of these",
+       "correctClass": true,
+       "titleAttr": "All of these. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Adopts lifestyles that promote health",
+       "blank": "Adopts lifestyles that promote health",
+       "correctClass": false,
+       "titleAttr": "Adopts lifestyles that promote health."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Monitors and manages signs and symptoms",
+       "blank": "Monitors and manages signs and symptoms",
+       "correctClass": false,
+       "titleAttr": "Monitors and manages signs and symptoms."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "All of these"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 3",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "What is the primary treatment goal for patients with long-term pain?",
+     "options": [
+      "Pain management and improving function",
+      "Avoiding all medications",
+      "Increasing pain tolerance",
+      "Complete elimination of pain"
+     ],
+     "answers": [
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Pain management and improving function",
+       "blank": "Pain management and improving function",
+       "correctClass": true,
+       "titleAttr": "Pain management and improving function. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Avoiding all medications",
+       "blank": "Avoiding all medications",
+       "correctClass": false,
+       "titleAttr": "Avoiding all medications."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Increasing pain tolerance",
+       "blank": "Increasing pain tolerance",
+       "correctClass": false,
+       "titleAttr": "Increasing pain tolerance."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Complete elimination of pain",
+       "blank": "Complete elimination of pain",
+       "correctClass": false,
+       "titleAttr": "Complete elimination of pain."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Pain management and improving function"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 4",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "Self-management support must:",
+     "options": [
+      "All of these",
+      "Be appropriate for the person with the long-term condition and their whanau",
+      "Be developed in partnership",
+      "Focus on reducing inequities in health"
+     ],
+     "answers": [
+      {
+       "weight": "100",
+       "left": "",
+       "text": "All of these",
+       "blank": "All of these",
+       "correctClass": true,
+       "titleAttr": "All of these. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Be appropriate for the person with the long-term condition and their whanau",
+       "blank": "Be appropriate for the person with the long-term condition and their whanau",
+       "correctClass": false,
+       "titleAttr": "Be appropriate for the person with the long-term condition and their whanau."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Be developed in partnership",
+       "blank": "Be developed in partnership",
+       "correctClass": false,
+       "titleAttr": "Be developed in partnership."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Focus on reducing inequities in health",
+       "blank": "Focus on reducing inequities in health",
+       "correctClass": false,
+       "titleAttr": "Focus on reducing inequities in health."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "All of these"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 5",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "Self-management support programmes",
+     "options": [
+      "Replace the need the healthcare services",
+      "Provide support for healthcare workers",
+      "Enable people living with long-term conditions to meet others with the same or similar conditions",
+      "Provide support for whanau members"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Replace the need the healthcare services",
+       "blank": "Replace the need the healthcare services",
+       "correctClass": false,
+       "titleAttr": "Replace the need the healthcare services."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Provide support for healthcare workers",
+       "blank": "Provide support for healthcare workers",
+       "correctClass": false,
+       "titleAttr": "Provide support for healthcare workers."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Enable people living with long-term conditions to meet others with the same or similar conditions",
+       "blank": "Enable people living with long-term conditions to meet others with the same or similar conditions",
+       "correctClass": true,
+       "titleAttr": "Enable people living with long-term conditions to meet others with the same or similar conditions. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Provide support for whanau members",
+       "blank": "Provide support for whanau members",
+       "correctClass": false,
+       "titleAttr": "Provide support for whanau members."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Enable people living with long-term conditions to meet others with the same or similar conditions"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 6",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "The concept of interdependence involves",
+     "options": [
+      "Nurses encouraging people with long-term conditions to be independent",
+      "People with long-term conditions being dependent on others",
+      "People with long-term conditions being independent",
+      "Engaging with people with long-term conditions within their wider social context"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Nurses encouraging people with long-term conditions to be independent",
+       "blank": "Nurses encouraging people with long-term conditions to be independent",
+       "correctClass": false,
+       "titleAttr": "Nurses encouraging people with long-term conditions to be independent."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "People with long-term conditions being dependent on others",
+       "blank": "People with long-term conditions being dependent on others",
+       "correctClass": false,
+       "titleAttr": "People with long-term conditions being dependent on others."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "People with long-term conditions being independent",
+       "blank": "People with long-term conditions being independent",
+       "correctClass": false,
+       "titleAttr": "People with long-term conditions being independent."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Engaging with people with long-term conditions within their wider social context",
+       "blank": "Engaging with people with long-term conditions within their wider social context",
+       "correctClass": true,
+       "titleAttr": "Engaging with people with long-term conditions within their wider social context. This was the correct answer."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Engaging with people with long-term conditions within their wider social context"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 7",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "What is the primary goal in managing long-term health conditions?",
+     "options": [
+      "Minimise medication use",
+      "Avoid all physical activity",
+      "Cure the condition",
+      "Prevent complications and improve quality of life"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Minimise medication use",
+       "blank": "Minimise medication use",
+       "correctClass": false,
+       "titleAttr": "Minimise medication use."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Avoid all physical activity",
+       "blank": "Avoid all physical activity",
+       "correctClass": false,
+       "titleAttr": "Avoid all physical activity."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Cure the condition",
+       "blank": "Cure the condition",
+       "correctClass": false,
+       "titleAttr": "Cure the condition."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Prevent complications and improve quality of life",
+       "blank": "Prevent complications and improve quality of life",
+       "correctClass": true,
+       "titleAttr": "Prevent complications and improve quality of life. This was the correct answer."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Prevent complications and improve quality of life"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 8",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "What lifestyle modification is often recommended for patients with chronic obstructive pulmonary disease (COPD)?",
+     "options": [
+      "Increased salt intake",
+      "Smoking cessation",
+      "Increased sugar intake",
+      "High-intensity exercise"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Increased salt intake",
+       "blank": "Increased salt intake",
+       "correctClass": false,
+       "titleAttr": "Increased salt intake."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Smoking cessation",
+       "blank": "Smoking cessation",
+       "correctClass": true,
+       "titleAttr": "Smoking cessation. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Increased sugar intake",
+       "blank": "Increased sugar intake",
+       "correctClass": false,
+       "titleAttr": "Increased sugar intake."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "High-intensity exercise",
+       "blank": "High-intensity exercise",
+       "correctClass": false,
+       "titleAttr": "High-intensity exercise."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Smoking cessation"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 9",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "A 65-year-old patient has a health history of hypertension, type 2 diabetes and asthma. This is an example of:",
+     "options": [
+      "Interdependence",
+      "Multi-morbidity",
+      "Health literacy",
+      "Mortality"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Interdependence",
+       "blank": "Interdependence",
+       "correctClass": false,
+       "titleAttr": "Interdependence."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Multi-morbidity",
+       "blank": "Multi-morbidity",
+       "correctClass": true,
+       "titleAttr": "Multi-morbidity. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Health literacy",
+       "blank": "Health literacy",
+       "correctClass": false,
+       "titleAttr": "Health literacy."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Mortality",
+       "blank": "Mortality",
+       "correctClass": false,
+       "titleAttr": "Mortality."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Multi-morbidity"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 10",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "What is an important component of the nurses' role in supporting self-management for patients with long-term conditions?",
+     "options": [
+      "Focusing on medication adherence",
+      "Empowering patients with knowledge and skills to manage their own health",
+      "Limiting patient involvement in their care",
+      "Doing everything for the patient"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Focusing on medication adherence",
+       "blank": "Focusing on medication adherence",
+       "correctClass": false,
+       "titleAttr": "Focusing on medication adherence."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Empowering patients with knowledge and skills to manage their own health",
+       "blank": "Empowering patients with knowledge and skills to manage their own health",
+       "correctClass": true,
+       "titleAttr": "Empowering patients with knowledge and skills to manage their own health. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Limiting patient involvement in their care",
+       "blank": "Limiting patient involvement in their care",
+       "correctClass": false,
+       "titleAttr": "Limiting patient involvement in their care."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Doing everything for the patient",
+       "blank": "Doing everything for the patient",
+       "correctClass": false,
+       "titleAttr": "Doing everything for the patient."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Empowering patients with knowledge and skills to manage their own health"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    }
+   ]
+  },
+  {
    "file": "INPCAP-210102.html",
    "title": "Diabetes Quiz",
    "sha256": "56313f1c93fab8bdcde136deed3f616a834fdc850ace57e3dc5a6f66d210d754",
@@ -5487,6 +6034,553 @@
    ]
   },
   {
+   "file": "INPCAP-210117.html",
+   "title": "Practice Quiz 3",
+   "sha256": "e60a4d009fb9f99492755fd4588af52090db4231d357c6a5951c1c7edee63ef4",
+   "questions": [
+    {
+     "n": "Question 1",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "Vital signs are taken to:",
+     "options": [
+      "assess physiological functioning of the body",
+      "comply with the doctors orders for vital signs to be taken",
+      "assess the psychological status of the client",
+      "Regulate the client's condition within a narrow range"
+     ],
+     "answers": [
+      {
+       "weight": "100",
+       "left": "",
+       "text": "assess physiological functioning of the body",
+       "blank": "assess physiological functioning of the body",
+       "correctClass": true,
+       "titleAttr": "assess physiological functioning of the body. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "comply with the doctors orders for vital signs to be taken",
+       "blank": "comply with the doctors orders for vital signs to be taken",
+       "correctClass": false,
+       "titleAttr": "comply with the doctors orders for vital signs to be taken."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "assess the psychological status of the client",
+       "blank": "assess the psychological status of the client",
+       "correctClass": false,
+       "titleAttr": "assess the psychological status of the client."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Regulate the client's condition within a narrow range",
+       "blank": "Regulate the client's condition within a narrow range",
+       "correctClass": false,
+       "titleAttr": "Regulate the client's condition within a narrow range."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "assess physiological functioning of the body"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 2",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "The sphygmomanometer is an instrument that:",
+     "options": [
+      "measures blood pressure",
+      "collects spinal fluid samples",
+      "measures rectal temperature",
+      "evaluates blood viscosity"
+     ],
+     "answers": [
+      {
+       "weight": "100",
+       "left": "",
+       "text": "measures blood pressure",
+       "blank": "measures blood pressure",
+       "correctClass": true,
+       "titleAttr": "measures blood pressure. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "collects spinal fluid samples",
+       "blank": "collects spinal fluid samples",
+       "correctClass": false,
+       "titleAttr": "collects spinal fluid samples."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "measures rectal temperature",
+       "blank": "measures rectal temperature",
+       "correctClass": false,
+       "titleAttr": "measures rectal temperature."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "evaluates blood viscosity",
+       "blank": "evaluates blood viscosity",
+       "correctClass": false,
+       "titleAttr": "evaluates blood viscosity."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "measures blood pressure"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 3",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "What is the term that describes the absence of breathing?",
+     "options": [
+      "trimpnoea",
+      "apnoea",
+      "asystole",
+      "dyspnea"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "trimpnoea",
+       "blank": "trimpnoea",
+       "correctClass": false,
+       "titleAttr": "trimpnoea."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "apnoea",
+       "blank": "apnoea",
+       "correctClass": true,
+       "titleAttr": "apnoea. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "asystole",
+       "blank": "asystole",
+       "correctClass": false,
+       "titleAttr": "asystole."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "dyspnea",
+       "blank": "dyspnea",
+       "correctClass": false,
+       "titleAttr": "dyspnea."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "apnoea"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 4",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "What is the medical term for fever?",
+     "options": [
+      "thermophillia",
+      "hydropenia",
+      "pyrexia",
+      "hyperthermia"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "thermophillia",
+       "blank": "thermophillia",
+       "correctClass": false,
+       "titleAttr": "thermophillia."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "hydropenia",
+       "blank": "hydropenia",
+       "correctClass": false,
+       "titleAttr": "hydropenia."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "pyrexia",
+       "blank": "pyrexia",
+       "correctClass": true,
+       "titleAttr": "pyrexia. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "hyperthermia",
+       "blank": "hyperthermia",
+       "correctClass": false,
+       "titleAttr": "hyperthermia."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "pyrexia"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 5",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "Which vital sign is most susceptible to conscious control?",
+     "options": [
+      "respirations",
+      "blood pressure",
+      "temperature",
+      "pulse rate"
+     ],
+     "answers": [
+      {
+       "weight": "100",
+       "left": "",
+       "text": "respirations",
+       "blank": "respirations",
+       "correctClass": true,
+       "titleAttr": "respirations. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "blood pressure",
+       "blank": "blood pressure",
+       "correctClass": false,
+       "titleAttr": "blood pressure."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "temperature",
+       "blank": "temperature",
+       "correctClass": false,
+       "titleAttr": "temperature."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "pulse rate",
+       "blank": "pulse rate",
+       "correctClass": false,
+       "titleAttr": "pulse rate."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "respirations"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 6",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "What temperature reading reflects that a person is pyrexic?",
+     "options": [
+      "35. 3 degrees celsius",
+      "37.2 degrees celsius",
+      "36.6 degrees celsius",
+      "39.6 degrees celsius"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "35. 3 degrees celsius",
+       "blank": "35. 3 degrees celsius",
+       "correctClass": false,
+       "titleAttr": "35. 3 degrees celsius."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "37.2 degrees celsius",
+       "blank": "37.2 degrees celsius",
+       "correctClass": false,
+       "titleAttr": "37.2 degrees celsius."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "36.6 degrees celsius",
+       "blank": "36.6 degrees celsius",
+       "correctClass": false,
+       "titleAttr": "36.6 degrees celsius."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "39.6 degrees celsius",
+       "blank": "39.6 degrees celsius",
+       "correctClass": true,
+       "titleAttr": "39.6 degrees celsius. This was the correct answer."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "39.6 degrees celsius"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 7",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "An elevated blood sugar level is also known as:",
+     "options": [
+      "Diabetic ketoacidosis",
+      "hypoglycaemia",
+      "Diabetes Mellitus",
+      "hyperglycaemia"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Diabetic ketoacidosis",
+       "blank": "Diabetic ketoacidosis",
+       "correctClass": false,
+       "titleAttr": "Diabetic ketoacidosis."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "hypoglycaemia",
+       "blank": "hypoglycaemia",
+       "correctClass": false,
+       "titleAttr": "hypoglycaemia."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Diabetes Mellitus",
+       "blank": "Diabetes Mellitus",
+       "correctClass": false,
+       "titleAttr": "Diabetes Mellitus."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "hyperglycaemia",
+       "blank": "hyperglycaemia",
+       "correctClass": true,
+       "titleAttr": "hyperglycaemia. This was the correct answer."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "hyperglycaemia"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 8",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "What are the two principles which underpin the therapeutic use of self in nursing?",
+     "options": [
+      "emotional intelligence & forming relationships",
+      "authoritative communication & emotional abuse",
+      "competent communication & emotional intelligence",
+      "communication & forming relationship"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "emotional intelligence & forming relationships",
+       "blank": "emotional intelligence & forming relationships",
+       "correctClass": false,
+       "titleAttr": "emotional intelligence & forming relationships."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "authoritative communication & emotional abuse",
+       "blank": "authoritative communication & emotional abuse",
+       "correctClass": false,
+       "titleAttr": "authoritative communication & emotional abuse."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "competent communication & emotional intelligence",
+       "blank": "competent communication & emotional intelligence",
+       "correctClass": true,
+       "titleAttr": "competent communication & emotional intelligence. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "communication & forming relationship",
+       "blank": "communication & forming relationship",
+       "correctClass": false,
+       "titleAttr": "communication & forming relationship."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "competent communication & emotional intelligence"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 9",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "Mrs Watson's heart rate is 48 beats per minute. The correct medical term for this is:",
+     "options": [
+      "dyscardia",
+      "bradycardia",
+      "myocardia",
+      "bradypnoea"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "dyscardia",
+       "blank": "dyscardia",
+       "correctClass": false,
+       "titleAttr": "dyscardia."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "bradycardia",
+       "blank": "bradycardia",
+       "correctClass": true,
+       "titleAttr": "bradycardia. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "myocardia",
+       "blank": "myocardia",
+       "correctClass": false,
+       "titleAttr": "myocardia."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "bradypnoea",
+       "blank": "bradypnoea",
+       "correctClass": false,
+       "titleAttr": "bradypnoea."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "bradycardia"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 10",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "When caring for patients you know to use standard precautions. This is used:",
+     "options": [
+      "Providing care for the patient when they are sick",
+      "Any time you are exposed to body fluids",
+      "Only when the patient has MRSA",
+      "When you suspect the patient has an infection"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Providing care for the patient when they are sick",
+       "blank": "Providing care for the patient when they are sick",
+       "correctClass": false,
+       "titleAttr": "Providing care for the patient when they are sick."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Any time you are exposed to body fluids",
+       "blank": "Any time you are exposed to body fluids",
+       "correctClass": true,
+       "titleAttr": "Any time you are exposed to body fluids. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Only when the patient has MRSA",
+       "blank": "Only when the patient has MRSA",
+       "correctClass": false,
+       "titleAttr": "Only when the patient has MRSA."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "When you suspect the patient has an infection",
+       "blank": "When you suspect the patient has an infection",
+       "correctClass": false,
+       "titleAttr": "When you suspect the patient has an infection."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Any time you are exposed to body fluids"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    }
+   ]
+  },
+  {
    "file": "INPCAP-210118.html",
    "title": "Infection Prevention and Control Quiz",
    "sha256": "9f3ff237a37c73949cf22052aa585ceb2fbb33640d24344545876e4df306ece5",
@@ -6447,6 +7541,499 @@
       "kind": "options",
       "correct": [
        "True"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    }
+   ]
+  },
+  {
+   "file": "INPCAP-210120.html",
+   "title": "Practice Quiz 1",
+   "sha256": "898c380fe199a988f5a45155cb2fe130ccaccbe1d866aed986fc63c4f6ec0581",
+   "questions": [
+    {
+     "n": "Question 1",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "Which one of the following is a principle of Family centred care?",
+     "options": [
+      "Parenthood",
+      "Provision of only basic information to family",
+      "Disengagement",
+      "Partnership"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Parenthood",
+       "blank": "Parenthood",
+       "correctClass": false,
+       "titleAttr": "Parenthood."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Provision of only basic information to family",
+       "blank": "Provision of only basic information to family",
+       "correctClass": false,
+       "titleAttr": "Provision of only basic information to family."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Disengagement",
+       "blank": "Disengagement",
+       "correctClass": false,
+       "titleAttr": "Disengagement."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Partnership",
+       "blank": "Partnership",
+       "correctClass": true,
+       "titleAttr": "Partnership. This was the correct answer."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Partnership"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 2",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "Which one of the following is the main purpose of documentation?",
+     "options": [
+      "because we are providing care and sometimes make errors",
+      "it promotes compliance with legal requirements",
+      "it is something we have done for years",
+      "the other nurses might need to know about the patient"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "because we are providing care and sometimes make errors",
+       "blank": "because we are providing care and sometimes make errors",
+       "correctClass": false,
+       "titleAttr": "because we are providing care and sometimes make errors."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "it promotes compliance with legal requirements",
+       "blank": "it promotes compliance with legal requirements",
+       "correctClass": true,
+       "titleAttr": "it promotes compliance with legal requirements. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "it is something we have done for years",
+       "blank": "it is something we have done for years",
+       "correctClass": false,
+       "titleAttr": "it is something we have done for years."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "the other nurses might need to know about the patient",
+       "blank": "the other nurses might need to know about the patient",
+       "correctClass": false,
+       "titleAttr": "the other nurses might need to know about the patient."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "it promotes compliance with legal requirements"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 3",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "Which of the following is not an example of subjective data?",
+     "options": [
+      "Feeling frustrated",
+      "Auscultation of heart sounds",
+      "Expression of confidence in mobilising",
+      "Reporting severe pain in leg"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Feeling frustrated",
+       "blank": "Feeling frustrated",
+       "correctClass": false,
+       "titleAttr": "Feeling frustrated."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Auscultation of heart sounds",
+       "blank": "Auscultation of heart sounds",
+       "correctClass": true,
+       "titleAttr": "Auscultation of heart sounds. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Expression of confidence in mobilising",
+       "blank": "Expression of confidence in mobilising",
+       "correctClass": false,
+       "titleAttr": "Expression of confidence in mobilising."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Reporting severe pain in leg",
+       "blank": "Reporting severe pain in leg",
+       "correctClass": false,
+       "titleAttr": "Reporting severe pain in leg."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Auscultation of heart sounds"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 4",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "Mrs. B is complaining of pain, the first action you would do is:",
+     "options": [
+      "Evaluate the effects of analgesia",
+      "Give prescribed pain relief",
+      "Assess her pain using the pain scale",
+      "Identify a nursing diagnosis"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Evaluate the effects of analgesia",
+       "blank": "Evaluate the effects of analgesia",
+       "correctClass": false,
+       "titleAttr": "Evaluate the effects of analgesia."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Give prescribed pain relief",
+       "blank": "Give prescribed pain relief",
+       "correctClass": false,
+       "titleAttr": "Give prescribed pain relief."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Assess her pain using the pain scale",
+       "blank": "Assess her pain using the pain scale",
+       "correctClass": true,
+       "titleAttr": "Assess her pain using the pain scale. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Identify a nursing diagnosis",
+       "blank": "Identify a nursing diagnosis",
+       "correctClass": false,
+       "titleAttr": "Identify a nursing diagnosis."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Assess her pain using the pain scale"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 5",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "Mrs. B becomes short of breath. This is called:",
+     "options": [
+      "Dyspnoea",
+      "Cyanosis",
+      "Hypoxia",
+      "Hypoxaemia"
+     ],
+     "answers": [
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Dyspnoea",
+       "blank": "Dyspnoea",
+       "correctClass": true,
+       "titleAttr": "Dyspnoea. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Cyanosis",
+       "blank": "Cyanosis",
+       "correctClass": false,
+       "titleAttr": "Cyanosis."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Hypoxia",
+       "blank": "Hypoxia",
+       "correctClass": false,
+       "titleAttr": "Hypoxia."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Hypoxaemia",
+       "blank": "Hypoxaemia",
+       "correctClass": false,
+       "titleAttr": "Hypoxaemia."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Dyspnoea"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 6",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "Mrs. B has a nursing care plan. This is a guideline:",
+     "options": [
+      "For legislation requirements only",
+      "For Doctor's orders",
+      "For patient care",
+      "From Nursing council"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "For legislation requirements only",
+       "blank": "For legislation requirements only",
+       "correctClass": false,
+       "titleAttr": "For legislation requirements only."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "For Doctor's orders",
+       "blank": "For Doctor's orders",
+       "correctClass": false,
+       "titleAttr": "For Doctor's orders."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "For patient care",
+       "blank": "For patient care",
+       "correctClass": true,
+       "titleAttr": "For patient care. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "From Nursing council",
+       "blank": "From Nursing council",
+       "correctClass": false,
+       "titleAttr": "From Nursing council."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "For patient care"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 7",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "Nursing practice now-a-days is focussed on:",
+     "options": [
+      "A deficit care model",
+      "The nursing process",
+      "The client",
+      "A nursing care plan"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "A deficit care model",
+       "blank": "A deficit care model",
+       "correctClass": false,
+       "titleAttr": "A deficit care model."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "The nursing process",
+       "blank": "The nursing process",
+       "correctClass": false,
+       "titleAttr": "The nursing process."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "The client",
+       "blank": "The client",
+       "correctClass": true,
+       "titleAttr": "The client. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "A nursing care plan",
+       "blank": "A nursing care plan",
+       "correctClass": false,
+       "titleAttr": "A nursing care plan."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "The client"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 8",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "The term 'long term conditions' was also known as:",
+     "options": [
+      "Short term conditions",
+      "Emergency health conditions",
+      "Chronic conditions",
+      "Personal conditions"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Short term conditions",
+       "blank": "Short term conditions",
+       "correctClass": false,
+       "titleAttr": "Short term conditions."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Emergency health conditions",
+       "blank": "Emergency health conditions",
+       "correctClass": false,
+       "titleAttr": "Emergency health conditions."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Chronic conditions",
+       "blank": "Chronic conditions",
+       "correctClass": true,
+       "titleAttr": "Chronic conditions. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Personal conditions",
+       "blank": "Personal conditions",
+       "correctClass": false,
+       "titleAttr": "Personal conditions."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Chronic conditions"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 9",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "Dr Z asks you to write down an emergency medication order over the telephone. As a first year student nurse you would say:",
+     "options": [
+      "Yes, I can take an order for emergency medications",
+      "I cannot as it is not in my scope of practice and inform the RN preceptor",
+      "Ok, I will just get a pen",
+      "Ok, but I am not very good at spelling medications"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Yes, I can take an order for emergency medications",
+       "blank": "Yes, I can take an order for emergency medications",
+       "correctClass": false,
+       "titleAttr": "Yes, I can take an order for emergency medications."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "I cannot as it is not in my scope of practice and inform the RN preceptor",
+       "blank": "I cannot as it is not in my scope of practice and inform the RN preceptor",
+       "correctClass": true,
+       "titleAttr": "I cannot as it is not in my scope of practice and inform the RN preceptor. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Ok, I will just get a pen",
+       "blank": "Ok, I will just get a pen",
+       "correctClass": false,
+       "titleAttr": "Ok, I will just get a pen."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Ok, but I am not very good at spelling medications",
+       "blank": "Ok, but I am not very good at spelling medications",
+       "correctClass": false,
+       "titleAttr": "Ok, but I am not very good at spelling medications."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "I cannot as it is not in my scope of practice and inform the RN preceptor"
       ]
      },
      "keyWhy": null,
@@ -7549,6 +9136,499 @@
    ]
   },
   {
+   "file": "INPCAP-210127.html",
+   "title": "Practice Quiz 2",
+   "sha256": "56352cdb8d678f8cd305f0d7251bbced6e3d7f1d16a10fc3357b52b76c5de18f",
+   "questions": [
+    {
+     "n": "Question 1",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "Tachycardia is defined as:",
+     "options": [
+      "A heart rate over 100 beats per minute",
+      "Absence of heart beat",
+      "A heart disorder",
+      "An increased breathing rate"
+     ],
+     "answers": [
+      {
+       "weight": "100",
+       "left": "",
+       "text": "A heart rate over 100 beats per minute",
+       "blank": "A heart rate over 100 beats per minute",
+       "correctClass": true,
+       "titleAttr": "A heart rate over 100 beats per minute. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Absence of heart beat",
+       "blank": "Absence of heart beat",
+       "correctClass": false,
+       "titleAttr": "Absence of heart beat."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "A heart disorder",
+       "blank": "A heart disorder",
+       "correctClass": false,
+       "titleAttr": "A heart disorder."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "An increased breathing rate",
+       "blank": "An increased breathing rate",
+       "correctClass": false,
+       "titleAttr": "An increased breathing rate."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "A heart rate over 100 beats per minute"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 2",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "What is the most essential aspect of infection control management?",
+     "options": [
+      "Swab all patients",
+      "Isolate all patients",
+      "Hand hygiene",
+      "Contact precautions only"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Swab all patients",
+       "blank": "Swab all patients",
+       "correctClass": false,
+       "titleAttr": "Swab all patients."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Isolate all patients",
+       "blank": "Isolate all patients",
+       "correctClass": false,
+       "titleAttr": "Isolate all patients."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Hand hygiene",
+       "blank": "Hand hygiene",
+       "correctClass": true,
+       "titleAttr": "Hand hygiene. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Contact precautions only",
+       "blank": "Contact precautions only",
+       "correctClass": false,
+       "titleAttr": "Contact precautions only."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Hand hygiene"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 3",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "A client is complaining of pain following admission to the medical ward. The Physician orders analgesia to be administered PRN Q4 hourly. However, the RN would like to check the pain score before administering analgesia, what aspect of nursing care is being provided?",
+     "options": [
+      "Evaluation",
+      "Assessment",
+      "Implementation",
+      "Planning"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Evaluation",
+       "blank": "Evaluation",
+       "correctClass": false,
+       "titleAttr": "Evaluation."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Assessment",
+       "blank": "Assessment",
+       "correctClass": true,
+       "titleAttr": "Assessment. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Implementation",
+       "blank": "Implementation",
+       "correctClass": false,
+       "titleAttr": "Implementation."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Planning",
+       "blank": "Planning",
+       "correctClass": false,
+       "titleAttr": "Planning."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Assessment"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 4",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "The nurse is caring for a client with end-stage lung disease. The client wants to go home on Oxygen therapy and be comfortable. The family wants the client to undergo a new surgical procedure. The doctor explains the risks and benefits of the surgery to the family and the nurse discusses the clients' wishes with the family. The nurse is acting as the client's:",
+     "options": [
+      "Manager",
+      "Caregiver",
+      "Educator",
+      "Advocate"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Manager",
+       "blank": "Manager",
+       "correctClass": false,
+       "titleAttr": "Manager."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Caregiver",
+       "blank": "Caregiver",
+       "correctClass": false,
+       "titleAttr": "Caregiver."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Educator",
+       "blank": "Educator",
+       "correctClass": false,
+       "titleAttr": "Educator."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Advocate",
+       "blank": "Advocate",
+       "correctClass": true,
+       "titleAttr": "Advocate. This was the correct answer."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Advocate"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 5",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "The 2023 NZ Health Strategy is part of a collection of strategies published under the:",
+     "options": [
+      "Mental Health Compulsory Treatment and Assessment Act 1992",
+      "Medicines Act 1981",
+      "Pae Ora (Healthy Futures) Act 2022",
+      "Health Practitioners Competence Assurance Act 2003"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Mental Health Compulsory Treatment and Assessment Act 1992",
+       "blank": "Mental Health Compulsory Treatment and Assessment Act 1992",
+       "correctClass": false,
+       "titleAttr": "Mental Health Compulsory Treatment and Assessment Act 1992."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Medicines Act 1981",
+       "blank": "Medicines Act 1981",
+       "correctClass": false,
+       "titleAttr": "Medicines Act 1981."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Pae Ora (Healthy Futures) Act 2022",
+       "blank": "Pae Ora (Healthy Futures) Act 2022",
+       "correctClass": true,
+       "titleAttr": "Pae Ora (Healthy Futures) Act 2022. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Health Practitioners Competence Assurance Act 2003",
+       "blank": "Health Practitioners Competence Assurance Act 2003",
+       "correctClass": false,
+       "titleAttr": "Health Practitioners Competence Assurance Act 2003."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Pae Ora (Healthy Futures) Act 2022"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 6",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "One of the main goals of the 2023 NZ Health Strategy is:",
+     "options": [
+      "To recognise Realm countries",
+      "To achieve health equity",
+      "To standardise health care",
+      "To value the workforce"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "To recognise Realm countries",
+       "blank": "To recognise Realm countries",
+       "correctClass": false,
+       "titleAttr": "To recognise Realm countries."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "To achieve health equity",
+       "blank": "To achieve health equity",
+       "correctClass": true,
+       "titleAttr": "To achieve health equity. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "To standardise health care",
+       "blank": "To standardise health care",
+       "correctClass": false,
+       "titleAttr": "To standardise health care."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "To value the workforce",
+       "blank": "To value the workforce",
+       "correctClass": false,
+       "titleAttr": "To value the workforce."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "To achieve health equity"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 7",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "More health professionals are using telemedicine particularly for people:",
+     "options": [
+      "who would prefer care closer to home",
+      "who have difficult access to healthcare due to location",
+      "living in centralised suburbs",
+      "living in urban parts of the country"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "who would prefer care closer to home",
+       "blank": "who would prefer care closer to home",
+       "correctClass": false,
+       "titleAttr": "who would prefer care closer to home."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "who have difficult access to healthcare due to location",
+       "blank": "who have difficult access to healthcare due to location",
+       "correctClass": true,
+       "titleAttr": "who have difficult access to healthcare due to location. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "living in centralised suburbs",
+       "blank": "living in centralised suburbs",
+       "correctClass": false,
+       "titleAttr": "living in centralised suburbs."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "living in urban parts of the country",
+       "blank": "living in urban parts of the country",
+       "correctClass": false,
+       "titleAttr": "living in urban parts of the country."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "who have difficult access to healthcare due to location"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 8",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "When would you carry out a pain assessment on a patient?",
+     "options": [
+      "Every time you check on your patient",
+      "before getting them out of bed",
+      "if the patient seems distressed",
+      "when the doctor tells you to"
+     ],
+     "answers": [
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Every time you check on your patient",
+       "blank": "Every time you check on your patient",
+       "correctClass": true,
+       "titleAttr": "Every time you check on your patient. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "before getting them out of bed",
+       "blank": "before getting them out of bed",
+       "correctClass": false,
+       "titleAttr": "before getting them out of bed."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "if the patient seems distressed",
+       "blank": "if the patient seems distressed",
+       "correctClass": false,
+       "titleAttr": "if the patient seems distressed."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "when the doctor tells you to",
+       "blank": "when the doctor tells you to",
+       "correctClass": false,
+       "titleAttr": "when the doctor tells you to."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Every time you check on your patient"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    },
+    {
+     "n": "Question 9",
+     "type": "multiple_choice_question",
+     "points": 1,
+     "q": "Your preceptor is busy writing clinical notes and asks you to give Mrs. Jones her Paracetamol tablets which are overdue. Your best response as a first-year student nurse is:",
+     "options": [
+      "Check the patient's wristband before administering the medication",
+      "Check the medication chart and start preparing the medication",
+      "Decline as this is not in a student nurse's scope of practice",
+      "Ask what room she is in"
+     ],
+     "answers": [
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Check the patient's wristband before administering the medication",
+       "blank": "Check the patient's wristband before administering the medication",
+       "correctClass": false,
+       "titleAttr": "Check the patient's wristband before administering the medication."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Check the medication chart and start preparing the medication",
+       "blank": "Check the medication chart and start preparing the medication",
+       "correctClass": false,
+       "titleAttr": "Check the medication chart and start preparing the medication."
+      },
+      {
+       "weight": "100",
+       "left": "",
+       "text": "Decline as this is not in a student nurse's scope of practice",
+       "blank": "Decline as this is not in a student nurse's scope of practice",
+       "correctClass": true,
+       "titleAttr": "Decline as this is not in a student nurse's scope of practice. This was the correct answer."
+      },
+      {
+       "weight": "0",
+       "left": "",
+       "text": "Ask what room she is in",
+       "blank": "Ask what room she is in",
+       "correctClass": false,
+       "titleAttr": "Ask what room she is in."
+      }
+     ],
+     "key": {
+      "kind": "options",
+      "correct": [
+       "Decline as this is not in a student nurse's scope of practice"
+      ]
+     },
+     "keyWhy": null,
+     "images": []
+    }
+   ]
+  },
+  {
    "file": "INPCAP-210129.html",
    "title": "Evidence-based practice Quiz",
    "sha256": "d1901bde6d91803db01cd8ff4dad48f5b08f67b17e0ccecb3dbcae35648485d7",
@@ -8584,6 +10664,233 @@
       ]
      },
      "keyWhy": null,
+     "images": []
+    }
+   ]
+  },
+  {
+   "file": "INPCAP-213107.html",
+   "title": "Te Tiriti o Waitangi, Māori Health, Kawa Whakaruruhau, Cultural Safety",
+   "sha256": "deddc325bd5c98e82c15fe6368229da6edf9192d555eba101608deb7e9901583",
+   "questions": [
+    {
+     "n": "",
+     "type": "text_only_question",
+     "points": null,
+     "q": "1. Kawa Whakaruruhau and cultural safety: introducing the video series Cultural safety requires nurses to engage in ongoing self-reflection and self-awareness of thir own cultural identity, while recognizing and addressing power imblances within care relationships. The Council has released a new suite of videos exploring Kawa Whakaruruhau — what it looks like in practice, how it can be approached, and inviting reflection to support every nurse to grow and develop their practice.",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "no option carried weight 100 or class correct_answer",
+     "images": []
+    },
+    {
+     "n": "Question 1",
+     "type": "essay_question",
+     "points": 1,
+     "q": "What was your understanding about cultural safety and kawa whakaruruhau, prior to watching the videos?",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "essay — Canvas holds no key (self-marked)",
+     "images": []
+    },
+    {
+     "n": "",
+     "type": "text_only_question",
+     "points": null,
+     "q": "2. Te Tiriti o Waitangi in everyday nursing practice Hineroa Hakiaha (Ngāti Tūhoe) and Pauline McKay (tauiwi) reflect on how Te Tiriti o Waitangi is a living framework for nursing practice in Aotearoa New Zealand. They highlight how culturally safe care is built through welcoming whānau, building trust, working in partnership, and recognising the impact care has on people and communities. It is a practical reminder that cultural safety is not separate from nursing practice—it is central to safe, respectful, and equitable care.",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "no option carried weight 100 or class correct_answer",
+     "images": []
+    },
+    {
+     "n": "Question 2",
+     "type": "essay_question",
+     "points": 1,
+     "q": "How does a simple welcome help build trust between nurses and patients?",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "essay — Canvas holds no key (self-marked)",
+     "images": []
+    },
+    {
+     "n": "Question 3",
+     "type": "essay_question",
+     "points": 1,
+     "q": "What is 'kawa'",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "essay — Canvas holds no key (self-marked)",
+     "images": []
+    },
+    {
+     "n": "Question 4",
+     "type": "essay_question",
+     "points": 1,
+     "q": "What is 'whakaruruhau'",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "essay — Canvas holds no key (self-marked)",
+     "images": []
+    },
+    {
+     "n": "Question 5",
+     "type": "essay_question",
+     "points": 1,
+     "q": "What is 'wairuatanga'",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "essay — Canvas holds no key (self-marked)",
+     "images": []
+    },
+    {
+     "n": "",
+     "type": "text_only_question",
+     "points": null,
+     "q": "3. Moving beyond competence to safety Dean Cowles (Ngāti Awa) explains how cultural safety guidance is embedded in the Standards of Competence, supporting nurses to move beyond competence towards care that actively upholds equity, Te Tiriti o Waitangi, and Māori health outcomes. His kōrero reinforces that cultural safety is more than awareness or competence—it supports nurses to reflect on how practice contributes to equity, public safety, and Māori health outcomes.",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "no option carried weight 100 or class correct_answer",
+     "images": []
+    },
+    {
+     "n": "Question 6",
+     "type": "essay_question",
+     "points": 1,
+     "q": "According to Dean, what is the purpose of Pou 1: Maori Health",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "essay — Canvas holds no key (self-marked)",
+     "images": []
+    },
+    {
+     "n": "Question 7",
+     "type": "essay_question",
+     "points": 1,
+     "q": "What does the speaker say is \"the epitomy of kawa whakaruruhau\"?",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "essay — Canvas holds no key (self-marked)",
+     "images": []
+    },
+    {
+     "n": "Question 8",
+     "type": "essay_question",
+     "points": 1,
+     "q": "What examples are given of how we can uphold kawanatanga, tino rangatiratanga, oritetanga",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "essay — Canvas holds no key (self-marked)",
+     "images": []
+    },
+    {
+     "n": "",
+     "type": "text_only_question",
+     "points": null,
+     "q": "4. Cultural safety: Back to basics Rauakahawai O’Connor (Raukawa, Ngāti Huri te Hapū) reflects on cultural safety as a long‑standing strength of nursing in Aotearoa New Zealand, grounded in whakapapa, tikanga and everyday practice. Cultural safety is grounded in everyday practice. This kōrero helps bring this to life through practical examples that show how care can uphold mana, strengthen relationships, and support equitable outcomes. It encourages reflection on how simple actions—such as creating safe spaces, respecting tikanga, and supporting whānau—shape whether care is experienced as culturally safe.",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "no option carried weight 100 or class correct_answer",
+     "images": []
+    },
+    {
+     "n": "Question 9",
+     "type": "essay_question",
+     "points": 1,
+     "q": "What example does she give for how do can embed rangatiratanga in our practice?",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "essay — Canvas holds no key (self-marked)",
+     "images": []
+    },
+    {
+     "n": "Question 10",
+     "type": "essay_question",
+     "points": 1,
+     "q": "What examples does she give of what tikanga looks like in nursing practice?",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "essay — Canvas holds no key (self-marked)",
+     "images": []
+    },
+    {
+     "n": "",
+     "type": "text_only_question",
+     "points": null,
+     "q": "5. Cultural safety begins with reflection and self-awareness Sandra McDonald (Ngāti Whātua, Ngāti Wai) shares real‑world examples demonstrating cultural safety in action. Cultural safety begins with reflection. This kōrero invites nurses to consider how self-awareness of their own cultural identity, communication, power, and relationships shape the experience of care.",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "no option carried weight 100 or class correct_answer",
+     "images": []
+    },
+    {
+     "n": "Question 11",
+     "type": "essay_question",
+     "points": 1,
+     "q": "What did she do to help the patient and whanau understand why they should stay in hospital for angiography?",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "essay — Canvas holds no key (self-marked)",
+     "images": []
+    },
+    {
+     "n": "Question 12",
+     "type": "essay_question",
+     "points": 1,
+     "q": "What did the nurse do to advocate for the kaumatua and his whānau?",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "essay — Canvas holds no key (self-marked)",
+     "images": []
+    },
+    {
+     "n": "Question 13",
+     "type": "essay_question",
+     "points": 1,
+     "q": "How did the nurse uphold tikanga for a patient who was on life support?",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "essay — Canvas holds no key (self-marked)",
+     "images": []
+    },
+    {
+     "n": "",
+     "type": "text_only_question",
+     "points": null,
+     "q": "7. Māori health model and bedside practices Hemaima Reihana-Tait (Ngāti Hine, Ngā Puhi, Ngāti Kahu, Ngāti Kere, Rangitāne ki Wairau, Ngai Tahu, Tai Tokerau) shares a practical, values‑led way to culturally safe care. She describes how whanaungatanga (connection), hauora (clinical practice), and whānau ora (shared understanding and resourcing) work together to support culturally safe care, focusing not just on what we do, but how we engage, reconnect, and support whānau to move forward with confidence.",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "no option carried weight 100 or class correct_answer",
+     "images": []
+    },
+    {
+     "n": "Question 14",
+     "type": "essay_question",
+     "points": 1,
+     "q": "What examples does she give about how nurses can demonstrate: 1. Whanaungatanga 2. Hauora 3. Whānau ora",
+     "options": [],
+     "answers": [],
+     "key": null,
+     "keyWhy": "essay — Canvas holds no key (self-marked)",
      "images": []
     }
    ]

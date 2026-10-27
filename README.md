@@ -14,7 +14,7 @@ the mock keeps the old slot's **160 min**.
 
 ## What is in it
 
-- **153 questions from 15 Canvas quizzes**, captured from graded attempts on 19 Sep 2026 and parsed
+- **153 questions from 15 Canvas quizzes**, captured from graded attempts on 19 Sep 2026 (4 more quizzes on 27 Oct, below) and parsed
   by the estate's shared parser, unchanged. 153 of 153 keyed, 0 held. Stems, options and keys ship
   exactly as set — 146 multi-choice, 4 true/false, 3 blank questions.
 - **120 questions written by this tool** (19 Sep 2026), every one labelled as the tool's on the page
@@ -30,6 +30,18 @@ the mock keeps the old slot's **160 min**.
   11 + 3, from the Clinical Learning Suite page "Inpatient Prep – Injections" — the Exam Content
   list names injections, no lecture teaches them). Key-longest 14% (5 of 35), key positions A–D 9/9/9/8.
   The two RF decks disagree on the acute antibiotic, so no question turns on it. Bank now 318.
+- **38 more of the lecturers' questions on 27 Oct 2026**, from four Canvas quizzes the September
+  capture missed because they sit in no Canvas module (found by listing the course's quizzes
+  through the API): **Long-Term Health Conditions** (210101, 10) and **Practice Quizzes 1–3**
+  (210120 · 210127 · 210117, 9 + 9 + 10). All keyed. The Practice Quizzes mix topics, so their QUIZ
+  group is `mixed` (a "Practice" group under Pick my rep) and `ROUTE` deals each question under its
+  lecture's group. The focus rows claim the same questions by stem (`PQ(...)` in `focus.js`), and the
+  build checks that each one lands in exactly one row. This gives pain, family-centred care, the
+  Health Strategy, therapeutic use of self, nurses' roles and student scope of practice their first
+  lecturer questions. Bank now 356.
+- **Still not in:** Rheumatic Fever (210112, one attempt only, not sat); the Module 11 Te Tiriti /
+  Kawa Whakaruruhau video quiz (213107 captured, but its 14 written questions have no answers, so the
+  build holds them all); and its second copy 213478, which has the same title and count and was not captured.
 - **The focus checklist** (`content/focus.js`, 28 rows: the 26 lectures + injections + the
   orientation Knowledge Check): per row what you must be able to DO, how the lecturers' own quiz asks it, where it stops.
   Each row names where its questions come from and **the build counts them and fails unless every
