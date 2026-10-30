@@ -7,7 +7,7 @@
      2. recall — the lecturers' own Canvas quiz questions, asked without their options: the answer to type is her key.
         Only questions with one answer that stands on its own (no "All of these", no "which is NOT", no "give an
         example of" with many right answers). Several to a card, per lecture.
-     3. the tool's 23 written questions (content/authored/), last, in their own group and tagged.
+     3. the tool's 26 written questions (content/authored/), last, in their own group and tagged.
    Not here: upstream/midstream/downstream (on the Exam Content list, but its Primary Health Care slides are pictures with
    no text to learn from). Source deck text: canvas-harvest/CanvasArchive/2026/Introduction to Nursing Practice …/text/
    files/Revision Semester 2 2026.pptx.txt. */
@@ -237,7 +237,7 @@ const recall = {
 };
 
 /* the tool's written questions: their own group, last in the queue */
-const writtenGroup = Object.fromEntries(['a-cna', 'a-tikanga', 'a-pain', 'a-fcc', 'a-nzhs', 'a-discharge', 'a-tus', 'a-roles', 'a-rf', 'a-ltc', 'a-inject',
+const writtenGroup = Object.fromEntries(['a-cna', 'a-tikanga', 'a-pain', 'a-fcc', 'a-nzhs', 'a-discharge', 'a-tus', 'a-roles', 'a-rf', 'a-ltc', 'a-inject', 'a-phc', 'a-screen',
   'w-care', 'w-clin', 'w-pop', 'w-prof'].map(q => [q, 'tool']));
 
 /* VERBATIM — the ladder (27 Oct 2026, his call: only verbatim material stays on the HS2-style ladder; the rest is cards).
@@ -272,5 +272,5 @@ export const REP = {
   groups: [{ id: 'tiriti', title: 'Te Tiriti & Kawa Whakaruruhau (video quiz)', hue: 18 }, ...groups], verbatim, pieces, recall, writtenGroup,
   cardsName: 'Flashcards',
   cardsSub: 'Janine’s revision slides, the lecturers’ quiz answers and the tool’s short answers · Anki, stripped down',
-  cardsHow: 'Lisa sets no practice short answers, so these come from the lecturers’ own material: <b>Janine’s revision deck</b> slide by slide (the question is the tool’s framing, every line of the answer is her slide), then <b>the lecturers’ own quiz questions</b> asked without their options, one card each, so you produce her key yourself. Last, in their own deck and tagged, the tool’s 23 short answers.',
+  cardsHow: 'Lisa sets no practice short answers, so these come from the lecturers’ own material: <b>Janine’s revision deck</b> slide by slide (the question is the tool’s framing, every line of the answer is her slide), then <b>the lecturers’ own quiz questions</b> asked without their options, one card each, so you produce her key yourself. Last, in their own deck and tagged, the tool’s 26 short answers.',
 };

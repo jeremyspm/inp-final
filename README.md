@@ -55,6 +55,13 @@ the mock keeps the old slot's **160 min**.
   - **Every deal serves the lecturers' questions first**: among equally-seen questions, a tool's question
     ranks after theirs (`pickN` in the shared template), in Learn, topic drills and both mocks. Bank now
     254: 191 theirs, 63 the tool's.
+- **30 Oct 2026: the last two lectures, 13 more of the tool's questions.** Primary Health Care & Health
+  Promotion (`phc.js`, 5 multi-choice + 2 short answers: the exam themes list names it twice, "Principles
+  of Primary Health Care" and "Theory of Health Promotion, upstream/midstream/downstream factors") and
+  Health Screening (`screening.js`, 5 + 1). Written from the decks on Canvas (harvested 19 and 26 Oct);
+  nearly every PHC slide is a picture of its text, so it was read slide by slide. Neither lecture has a
+  lecturer quiz. Each short answer has its short version. The bowel screening starting age is mid-change
+  in the deck (60, lowering to 58), so nothing turns on it. Bank now 267: 191 theirs, 76 the tool's.
 - **Still not in:** Rheumatic Fever (210112, one attempt only, not sat); the Module 11 Te Tiriti /
   Kawa Whakaruruhau video quiz (213107 captured, but its 14 written questions have no answers, so the
   build holds them all); and its second copy 213478, which has the same title and count and was not captured.
@@ -64,11 +71,12 @@ the mock keeps the old slot's **160 min**.
   question sits in exactly one row**. It is NOT a marks ranking — the lecturers' quizzes are flat
   (8–14 marks a lecture) and nobody has pointed at anything yet — so the top band is "a learning
   outcome names it and it recurs", and the band above it stays empty until the revision lectures
-  (23 and 27 Oct). Two rows (the lectures still to come) have nothing behind them and say so.
+  (23 and 27 Oct). Every row has questions behind it since 30 Oct.
   **The lecturers' Exam Content page** (8 Oct 2026, 29 themes in one flat list) names 27 of the 28
   rows — all but the Knowledge Check. Each named row carries flag `EC` (chip "📌 on the exam themes
   list") and `crit` = the page's exact wording plus what this bank lacks for it (wound assessment,
-  scope of practice, upstream/midstream/downstream: no question asks them). It ranks
+  scope of practice, upstream/midstream/downstream: no question asked them; scope since 27 Oct and the
+  streams since 30 Oct do). It ranks
   nothing, but it lifted Self-care and Roles of Nurses out of the bottom band.
 - **Learn as you go** (Check marks each question in place), **mock tests** (mini 12 · full 40 + 15, dealt
   in proportion across four groups, least-seen first, misses first), **Pick my rep** (tick any
@@ -81,10 +89,9 @@ the mock keeps the old slot's **160 min**.
 - **The lecturers' own short-answer questions.** Canvas has none. All fifteen written questions in a
   mock are the tool's, from the decks; the marks per question are unpublished, so each carries one
   mark per point in its model answer (2–6). Treat them as practice in the shape, not a forecast.
-- **Two of the course's 26 lectures**, still to be taught: Primary Health Care & Health Promotion
-  (14 Oct), Health Screening & Standards of Competence (20 Oct). Both are on the Exam Content list;
-  their questions go in `content/authored/` once the decks are on Canvas. Ten other no-quiz
-  lectures (and injections) are covered only by the tool's questions — not the lecturers' wording.
+- **The lecturers' wording for twelve no-quiz lectures (and injections).** They are covered only by the
+  tool's questions, including Primary Health Care & Health Promotion (14 Oct) and Health Screening
+  (20 Oct). The Standards of Competence have no deck; only the two Practice Quiz scope questions ask them.
   Revision lectures 23 and 27 Oct are where the exam gets pointed at.
 - Slide references under a question, and videos. Not built for this paper.
 - Ten Knowledge Check questions about being a student here (attendance, extensions, online-exam
@@ -100,11 +107,11 @@ answered in the speaker's own words from the Nursing Council's video series, by 
 `content/rep.js`). So far 4 of its 14: Q5–Q8, from video 3 (Dean Cowles, "Moving beyond competence to safety",
 vimeo.com/1180647014). Videos 2, 4, 5 and 7 are unlisted on Vimeo and were not found; Q1 asks for your own view.
 
-**Flashcards hold the rest, 173 cards in 13 decks**: Janine's revision deck (Revision Semester 2 2026) slide by slide in
+**Flashcards hold the rest, 176 cards in 13 decks**: Janine's revision deck (Revision Semester 2 2026) slide by slide in
 her words, 53 cards (the question is the tool's framing, every answer line is her slide; upstream/midstream/downstream
 is not in, its slides are pictures); 97 of the lecturers' own quiz questions asked without their options, one card
 each, her key the answer (only keys that stand on their own — no "All of these", no "which is NOT"); and the tool's
-23 short answers, last, in their own deck.
+26 short answers, last, in their own deck.
 
 **Flashcards (`cards.html`, 27 Oct 2026)** — his call the same evening: "we only leave the verbatim things the way
 HS2 is approached and the rest of it becomes straight up SRS cards, copy anki basically". A stripped-down Anki:

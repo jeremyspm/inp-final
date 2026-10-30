@@ -21,7 +21,8 @@
  *   tier 1  a learning outcome names the topic outright AND its content comes back in other
  *           lectures (flag X) — the course's own emphasis, the only kind on record.
  *   tier 2  examinable, one lecture's worth. Includes every lecture with NO lecturer quiz
- *           (flag noquiz: the only questions are the tool's) and the three not taught yet.
+ *           (flag noquiz: the only questions are the tool's). The last two to be taught —
+ *           Primary Health Care (14 Oct) and Health Screening (20 Oct) — got theirs on 30 Oct.
  *   tier 3  thin, or about being a student rather than nursing practice, AND not on the
  *           Exam Content list.
  * flag letters: LO1–LO4 = the syllabus learning outcome the topic serves (the exam assesses
@@ -223,20 +224,21 @@ export const FOCUS = [
   src:'CLS page “Inpatient Prep – Injections” (Canvas; adapted from Potter & Perry, ANZ ed. 2026)',
   crit:'“Vital signs, injections, blood glucose monitoring” — the injections part.' },
 
-{ id:'phc', sys:'pop', tier:2, t:'Primary health care and health promotion', flag:'untaught EC',
-  done:'Not taught yet — Wed 14 Oct.',
-  ask:'Unknown until the lecture and any quiz are posted.',
-  cap:'The levels of prevention (Demography & Epidemiology) and the primary-care section of Roles of Nurses are the groundwork already in this bank.',
-  src:'Canvas timetable',
-  crit:'“Theory of Health Promotion, upstream/midstream/downstream factors” · “Principles of Primary Health Care” — nothing in this bank asks either yet.' },
+{ id:'phc', sys:'pop', tier:2, t:'Primary health care and health promotion — Alma-Ata, the continuum, upstream to downstream', flag:'LO2 noquiz X EC',
+  from:[{ quiz:['a-phc'] }],
+  done:'Define primary health care (people-centred, most of a person’s health needs across a lifetime) and tell it from primary care (the first point of contact); give the Alma-Ata Declaration (1978) definition — essential care that is accessible, affordable and appropriate for all — and its five principles: accessibility, community participation, health promotion, appropriate technology, inter-sectoral collaboration, each with a nursing example; define health promotion (enabling people to increase control over, and improve, their health); name the Ottawa Charter’s three strategies — advocate, enable, mediate; name the five parts of the health promotion continuum — health education, health screening, community action, social marketing, influencing policy — with the deck’s NZ example of each; describe upstream, midstream and downstream approaches with an intervention for each.',
+  ask:'Nobody knows — no lecturer question exists. The deck’s learning outcomes are all “discuss”: the origins, the principles, the NZ frameworks, the continuum, upstream/midstream/downstream — short-answer verbs, and the exam themes list names the principles and the three streams outright.',
+  cap:'Nearly every slide is a picture of its text; the tool read them one by one. The Bangkok Charter (2005) is one slide; the NZ Health Strategy, Primary Health Care Strategy and Whānau Ora slides are pictures with no text (the Strategy has its own row). Slide 28 sets the Te Tiriti articles against health promotion — kāwanatanga, tino rangatiratanga, ōritetanga — the same idea as the Population Health principles.',
+  src:'Primary Health Care & Health Promotion deck (Canvas, posted for Wed 14 Oct)',
+  crit:'“Theory of Health Promotion, upstream/midstream/downstream factors” · “Principles of Primary Health Care”' },
 
-{ id:'screening', sys:'prof', tier:2, t:'Health screening and the Standards of Competence', flag:'untaught EC',
-  from:[PQ(/telephone|preceptor is busy/i)],
-  done:'Not taught yet — Tue 20 Oct.',
-  ask:'Unknown until the lecture and any quiz are posted.',
-  cap:'Secondary prevention = screening (already in Demography & Epidemiology). The Nursing Council Standards of Competence (2025, six pou) are on Canvas now as a PDF.',
-  src:'Canvas timetable',
-  crit:'“Health screening” · “Standards of Competence & BN2 Student Nurse scope of practice” — two Practice Quiz questions ask scope of practice: a doctor’s telephone order, and a preceptor asking you to give an overdue paracetamol. Both answers are “decline, it is not in a student nurse’s scope”.' },
+{ id:'screening', sys:'prof', tier:2, t:'Health screening and the Standards of Competence', flag:'noquiz EC',
+  from:[{ quiz:['a-screen'] }, PQ(/telephone|preceptor is busy/i)],
+  done:'Say what screening is for (finding people at risk before symptoms, for early intervention) and that it never gives a diagnosis; give the benefits and the risks — a false negative falsely reassures and delays diagnosis, a false positive causes anxiety and further tests; say what follows a positive result (a diagnostic test) and a negative one (screen again later); tell organised screening (national programmes run by the National Screening Unit that invite the highest-risk groups) from opportunistic (asked for, or offered by a health professional — the wellness clinics); name the six organised programmes with their key fact (BreastScreen 45–69 every 2 years · cervical HPV test every 5 years · bowel FIT every 2 years · newborn heel prick at 24–48 hours · newborn hearing before discharge · antenatal); give the nurse’s role; say a student nurse declines a telephone order or an overdue PRN — not in their scope.',
+  ask:'No lecturer question asks screening. The lecturers’ Practice Quizzes (captured 27 Oct) ask two on student scope of practice: a doctor’s telephone order, and a busy preceptor asking you to give an overdue paracetamol. Both answers are “decline, it is not in a student nurse’s scope”.',
+  cap:'Exact funding ages beyond BreastScreen are detail — the bowel starting age is mid-change in the deck (60, lowering to 58), so nothing turns on it. The wellness-clinic slides (BMI, urinalysis, peak flow) are the practical, not the paper. The Nursing Council Standards of Competence (2025, six pou) have no lecture deck — only the PDF on Canvas.',
+  src:'Health Screening deck (Canvas, posted for Tue 20 Oct) · Practice Quizzes 1–3',
+  crit:'“Health screening” · “Standards of Competence & BN2 Student Nurse scope of practice”' },
 
 { id:'self-care', sys:'prof', tier:2, t:'Self-care, burnout and resilience', flag:'EC',
   from:[{ quiz:['210105'] }, W('w-prof','Self-care in nursing deck')],
